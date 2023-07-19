@@ -1,7 +1,7 @@
 ## Case Study
 
 
-**A Library Information System for SE VLabs Institute**
+**1. A Library Information System for SE VLabs Institute**
 
 The SE VLabs Institute has been recently setup to provide state-of-the-art research facilities in the field of Software Engineering. Apart from research scholars (students) and professors, it also includes quite a large number of employees who work on different projects undertaken by the institution.
 
