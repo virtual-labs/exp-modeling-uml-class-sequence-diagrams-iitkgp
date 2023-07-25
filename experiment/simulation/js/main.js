@@ -162,7 +162,7 @@ function subex() {
     line4.hide();
     line5.hide();
     line6.hide();
-link2a.hide();
+    link2a.hide();
     link2b.hide();
     link2c.hide();
     link2d.hide();

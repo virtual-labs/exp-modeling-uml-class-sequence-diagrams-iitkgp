@@ -1,108 +1,585 @@
-
 <!--Redeveloped
 Lab: Software Engineering
 Exp: Modeling UML Class Diagrams and Sequence diagrams
 File Name: index.html
 Author: 1. Prakriti Dhang
-        2. -->
+        2. Saptarshi Mondal -->
 
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-    <!--link rel="styleshee" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"-->
-    <link rel="stylesheet" href="./css/css/fontawesome.css">
-    <link rel="stylesheet" href="./css/css/all.min.css">
-    
-   
-
-
-
-
-
-</head>
-<body>
-    <!-- <header id="header">
-        <div class="container p-3">
-          <div class="card">
-          <div class="row">
-            <div class="col-md-2">
-            <img src="images/vlabs-logo.png" class=" rounded img-fluid" alt="vlabs-logo" >
-          </div>
-          <div class="col-md-8 p-4">
-            <p class="h2 fw-bold text-primary text-center"> Virtual Lab IIT Kharagpur</p>
-          </div>
-          <div class="col-md-2">
-            <img src="images/iitkgp-logo.png" class=" rounded img-fluid" alt="iitkgplogo" >
-          </div>
-          </div>
-        </div>
-        </div>
-      </header>
-
-      <div class="container p-2">
-        <hr>
-        <p class="h3 fw-bold fst-italic text-center" style="color: #000283;"> Modeling UML Class Diagrams and Sequence diagrams</p>
-        <hr>
-    </div> -->
-
-    <div class="container mt-2 p-3">
-		
-        <div class="d-flex flex-column justify-content-center mb-3 ">  
-            <div class="row">
-                <div class="col-md-4">
-                   <p class="fs-5 fw-bold" style="color: brown;">Simplified class diagram and sequence diagram of a web browser.</p>
-                   <p style="text-align: justify;"> A web browser is a software that helps to access a resource (web page) available on the 
-                    World Wide Web and identified by a URL. Whenever a user types in the URL of a web page in the browser's address bar and 
-                    clicks the "Go" button, the browser sends a HTTP request to the concerned web server. If the requested resource is
-                     available and accessible, the web server sends back a HTTP response to the requesting web browser. In case of any error, 
-                     a HTTP response is sent indicating the error.
- </p>
-                   <p style="text-align: justify;">When the web browser receives a HTTP response, it displays the web page to the user. 
-                    In very simple terms a web browser can be thought of consisting the following sub-components: rendering engine, and 
-                    browser control.</p>
-                    <p style="text-align: justify;">
-                      Once a HTTP response has been obtained from the server, the rendering engine decides the layout of the contents and 
-                      actually displays the requested page. This is done keeping in mind the different HTML elements that are present in the page, 
-                      and corresponding CSS rules, if any. </p>
-
-<p style="text-align: justify;">The browser control provides facilities like navigating across pages (by following hyperlinks), reload a page, and handles other events related 
-to the window display, for example, resizing the browser window.
-                    </p>
-                </div>
-               
-                <div class="col-md-8">
-                  
-                <!---------------------  Add your simulation code here ------------------------>
-                </div>
-            </div>
-           <!--  <hr>
+        <!DOCTYPE html>
+        <html>
+        
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- Add CSS at the head of HTML file -->
+            <link rel="stylesheet" href="./css/main.css">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+            <!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"-->
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+            <!--link rel="styleshee" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"-->
+            <link rel="stylesheet" href="./css/css/fontawesome.css">
+            <link rel="stylesheet" href="./css/css/all.min.css">
+        
+            <!--For Saptarshi's simulation part-->
+        
+          
+            <script src="https://kit.fontawesome.com/3fd27b4197.js" crossorigin="anonymous"></script>
+            <link
+                href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&amp;family=Mukta:wght@600&amp;family=Oswald:wght@300;700&amp;display=swap"
+                rel="stylesheet">
+        
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        
+        
+        
+        
+        
+        
+        
+        </head>
+        
+        <body>
+            
+        
            
-            <a class="btn btn-success fs-4" target="_self" href="./class_seq.html" role="button">Click Here to Go to Exercise Page</a>
-            <hr>     -->
-        </div>
+        
+            <div class="container mt-2 p-3">
+        
+                <div class="d-flex flex-column justify-content-center mb-3 ">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p class="fs-5 fw-bold" style="color: brown;">Simplified class diagram and sequence diagram of a web
+                                browser.</p>
+                            <p style="text-align: justify;"> A web browser is a software that helps to access a resource (web
+                                page) available on the
+                                World Wide Web and identified by a URL. Whenever a user types in the URL of a web page in the
+                                browser's address bar and
+                                clicks the "Go" button, the browser sends a HTTP request to the concerned web server. If the
+                                requested resource is
+                                available and accessible, the web server sends back a HTTP response to the requesting web
+                                browser. In case of any error,
+                                a HTTP response is sent indicating the error.
+                            </p>
+                            <p style="text-align: justify;">When the web browser receives a HTTP response, it displays the web
+                                page to the user.
+                                In very simple terms a web browser can be thought of consisting the following sub-components:
+                                rendering engine, and
+                                browser control.</p>
+                            <p style="text-align: justify;">
+                                Once a HTTP response has been obtained from the server, the rendering engine decides the layout
+                                of the contents and
+                                actually displays the requested page. This is done keeping in mind the different HTML elements
+                                that are present in the page,
+                                and corresponding CSS rules, if any. </p>
+        
+                            <p style="text-align: justify;">The browser control provides facilities like navigating across pages
+                                (by following hyperlinks), reload a page, and handles other events related
+                                to the window display, for example, resizing the browser window.
+                            </p>
+                        </div>
+        
+                        <div class="col-md-8">
+        
+                            <!---------------------  Add your simulation code here ------------------------>
+        
+        
+        
+        
+                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+                                integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+                                crossorigin="anonymous"></script>
+        
+        
+                            <div class="container">
+                             <!--   <div class="row">
+                                    <div class="col-md-6 offset-md-6"></div>
+                                    <div class="col-md-6 offset-md-6"> -->
+        
+        
+                                        <!--Page 0 -->
+                                        <div id="page0" class="page" style="display:block">
+        
+                                            <div class="card-title fs-5 fst-italic fw-bold border border-3 border-primary rounded-3 p-2"
+                                                style="text-align: center; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+        
+                                                Class Diagrams and Sequence Diagrams
+        
+                                            </div>
+                                            <div class="play_button">
+                                                <button id="play" onclick="main_play_button()"><i class="fa-solid fa-play">
+                                                        Click To
+                                                        Play</i></button>
+                                                <div id="slideshow0" style="display:none">
+        
+                                                    <p>We will learn how to draw <strong>class diagrams</strong> and
+                                                        <strong>sequence
+                                                            diagrams</strong> to model
+                                                        a system from a given problem
+                                                        statement. We will follow these steps:
+                                                    </p>
+                                                </div>
+                                                <div id="List_0" style="display:none">
+        
+                                                    <ol>
+                                                        <li id="List_0.1" style="display:none"> 1. Represent classes with their
+                                                            state and
+                                                            behaviour</li>
+                                                        <li id="List_0.2" style="display:none"> 2. Association between
+                                                            identified classes</li>
+                                                        <li id="List_0.3" style="display:none"> 3. Aggregation of classes</li>
+                                                        <li id="List_0.4" style="display:none"> 4. Composition of classes</li>
+                                                        <li id="List_0.5" style="display:none"> 5. Inheritance of classes</li>
+                                                        <li id="List_0.6" style="display:none"> 6. Identifying sequence of
+                                                            activities</li>
+                                                        <li id="List_0.7" style="display:none"> 7. Drawing sequence diagrams
+                                                        </li>
+                                                    </ol>
+        
+        
+                                                </div>
+                                            </div>
+                                        </div>
+        
+        
+                                        <!--Page 1-->
+                                        <div id="page1" class="page" style="display:none">
+        
+        
+                                            <div class="card-title fs-5 fst-italic fw-bold border border-3 border-primary rounded-3 p-2"
+                                                style="text-align: center; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+                                                1. Representing a class: State and Behaviour
+                                            </div>
+        
+                                            <div class="box2">
+                                                <div id="slideshow1.0" style="display:none">
+        
+                                                    From the given problem statement we can come up with different classes. Some
+                                                    of them
+                                                    are
+                                                    shown
+                                                    below:
+                                                </div>
+                                                <ul id="List1.0" style="display:none">
+                                                    <li id="List1.1" style="display:none">1. WebBrowser</li>
+                                                    <li id="List1.2" style="display:none">2. WebServer</li>
+                                                    <li id="List1.3" style="display:none">3. RenderingEngine</li>
+                                                    <li id="List1.4" style="display:none">4. BrowserControl</li>
+                                                </ul>
+        
+                                                <div id="Slideshow1.1" style="display:none" class="note_box">
+                                                    <p>Note: Modeling of classes may differ from person to person. There is no
+                                                        <b>unique</b> solution.
+                                                    </p>
+                                                </div>
+                                                <div id="Slideshow1.2" style="display:none">
+                                                    Let's focus on the Web Browser class and identify it's major states and
+                                                    behaviours.
+                                                    <br>
+                                                    We will restrict ourselves only to conceptual class diagrams to keep things
+                                                    simple.
+                                                </div>
+                                                <div id="Slideshow1.3" style="display:none">
+                                                    <h2>Web Browser</h2>
+                                                </div>
+                                                <div id="Slideshow1.3.1" style="display:none">
+                                                    <h3>States:</h3>
+                                                </div>
+        
+                                                <ul id="Lt1.0" style="display:none">
+                                                    <li id="Lt1.1" style="display:none"><u>currentURL</u>: Indicating the page
+                                                        being currently
+                                                        loaded</li>
+                                                    <li id="Lt1.2" style="display:none"><u>version</u>: Indicating the browser
+                                                        version </li>
+                                                    <li id="Lt1.3" style="display:none"><u>addressBar</u>: A place where one can
+                                                        type in a URL
+                                                    </li>
+                                                </ul>
+        
+                                                <div id="Slideshow1.4.1" style="display:none">
+                                                    <h3>Behaviour:</h3>
+                                                </div>
+                                                <ul id="Lt1.1.0" style="display:none">
+                                                    <li id="Lt1.1.1" style="display:none"><u>loadPage</u>: Retrieve and display
+                                                        a web page when
+                                                        a URL is given</li>
+                                                    <li id="Lt1.1.2" style="display:none"><u>reloadPage</u>: Load the currently
+                                                        open web page
+                                                        again; no URL need to be
+                                                        specified </li>
+                                                </ul>
+        
+                                                <div id="Slideshow1.5" style="display:none" class="note_box">
+                                                    <p> Now let's represent these details pictorially.
+                                                    </p>
+                                                </div>
+                                                <div id="Slideshow1.6" style="display:none">
+        
+                                                    <div class="container">
+                                                        <img src="./images/Page1_image_1.png" class="img-fluid">
+                                                    </div>
+        
+                                                </div>
+                                                <div id="Slideshow1.7" style="display:none">
+        
+                                                    <div class="container">
+                                                        <img src="./images/Page1_image_2.png" class="img-fluid">
+                                                    </div>
+        
+                                                </div>
+                                                <div id="Slideshow1.8" style="display:none">
+        
+                                                    <div class="container">
+                                                        <img src="./images/Page1_image_3.png" class="img-fluid">
+                                                    </div>
+        
+                                                </div>
+                                                <div id="Slideshow1.9" style="display:none">
+        
+                                                    <div class="container">
+                                                        <img src="./images/Page1_image_4.png" class="img-fluid">
+                                                    </div>
+        
+                                                </div>
+                                                <div id="Slideshow1.10" style="display:none">
+        
+                                                    <div class="container">
+                                                        <img src="./images/Page1_image_5.png" class="img-fluid">
+                                                    </div>
+        
+                                                </div>
+                                                <div id="Slideshow1.11" style="display:none">
+                                                    In this way, we can represent other classes as well.
+                                                    <br>
+                                                    For example, let's see the Web Server class.
+                                                </div>
+                                                <div id="Slideshow1.12" style="display:none">
+        
+                                                    <div class="container">
+                                                        <img src="./images/Page1_image_6.png" class="img-fluid">
+                                                    </div>
+        
+                                                </div>
+                                            </div>
+        
+        
+        
+        
+        
+        
+                                        </div>
+        
+        
+        
+                                        <!--Page 2-->
+                                        <div id="page2" class="page" style="display:none">
+        
+        
+                                            <div class="card-title fs-5 fst-italic fw-bold border border-3 border-primary rounded-3 p-2"
+                                                style="text-align: center; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+                                                2. Association between Classes
+                                            </div>
+                                            <div class="box2">
+                                                <div id="slideshow2.0" style="display:none">
+        
+                                                    Having represented the classes, let us see how one can relate different
+                                                    classes. We
+                                                    will
+                                                    start
+                                                    with
+                                                    <b>association.</b>
+                                                </div>
+        
+                                                <div id="Slideshow2.1" style="display:none">
+                                                    Web Browser requests Web Server for a page. It can send requests to any
+                                                    number of
+                                                    web
+                                                    servers,
+                                                    including zero. The following figure represent this:
+                                                </div>
+                                                <div id="sequence_diag_1" style="display:none">
+                                                    <div class="container">
+                                                        <img src="./images/page2_image_1.png" class="img-fluid">
+                                                    </div>
+                                                </div>
+        
+                                                <div id="Slideshow2.2" style="display:none">
+                                                    Web Server in turn sends a response back to the Web Browser. It is possible
+                                                    that it
+                                                    might
+                                                    not
+                                                    send
+                                                    any response at all. We depict this below:
+                                                </div>
+                                                <div id="sequence_diag_1.1" style="display:none">
+                                                    <div class="container">
+                                                        <img src="./images/Page2_image_2.png" class="img-fluid">
+                                                    </div>
+                                                </div>
+        
+                                                <div id="Slideshow2.3" style="display:none">
+                                                    To represent unidirectional association, let us consider the Rendering
+                                                    Engine and
+                                                    File class.
+                                                </div>
+                                                <div id="sequence_diag_2" style="display:none">
+                                                    <div class="container">
+                                                        <img src="./images/Page2_image_3.png" class="img-fluid">
+                                                    </div>
+                                                </div>
+        
+        
+        
+        
+                                            </div>
+                                        </div>
+        
+        
+        
+        
+        
+        
+                                        <!--Page 3-->
+                                        <div id="page3" class="page" style="display:none">
+        
+        
+        
+                                            <div class="card-title fs-5 fst-italic fw-bold border border-3 border-primary rounded-3 p-2"
+                                                style="text-align: center; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+                                                3. Aggregation of Classes
+                                            </div>
+                                            <div class="box2">
+                                                <div id="slide_0">
+                                                    Rendering Engine is a part of the Web Browser. A given Rendering Engine,
+                                                    however, could
+                                                    be a
+                                                    part of more
+                                                    than one Web Browser.
+                                                    <br>
+                                                    <p>
+                                                        The above can be indicated by an aggregation.
+        
+                                                    <div id="sequence_diag_3.0" style="display:none">
+                                                        <div class="container">
+                                                            <img src="./images/Page3_image_1.png" class="img-fluid">
+                                                        </div>
+        
+                                                    </div>
+        
+        
+                                                </div>
+                                            </div>
+                                        </div>
+        
+        
+        
+                                        <!--Page 4-->
+                                        <div id="page4" class="page" style="display:none">
+        
+                                            <div class="card-title fs-5 fst-italic fw-bold border border-3 border-primary rounded-3 p-2"
+                                                style="text-align: center; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+                                                4. Composition of Classes
+                                            </div>
+                                            <div class="box2">
+                                                <div id="slide_4.0">
+                                                    Each Web Browser has it's own Browser Control. Without a Web Browser,
+                                                    Browser Control
+                                                    has no
+                                                    existence.
+                                                    Also, browsers typically have their own control logic. This can be
+                                                    represented by a
+                                                    composition
+                                                    relationship.
+                                                </div>
+        
+                                                <div id="sequence_diag_4.0" style="display:none">
+                                                    <div class="container">
+                                                        <img src="./images/Page4_image_1.png" class="img-fluid">
+                                                    </div>
+                                                </div>
+        
+                                            </div>
+                                        </div>
+        
+        
+        
+                                        <!--Page 5-->
+                                        <div id="page5" class="page" style="display:none">
+        
+                                            <div class="card-title fs-5 fst-italic fw-bold border border-3 border-primary rounded-3 p-2"
+                                                style="text-align: center; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+                                                5.Inheritance of Classes
+                                            </div>
+                                            <div class="box2">
+                                                <div id="slide_5.0" style="display: none;">
+                                                    <p>Web Browser can display a HTML file, an image, or may be just a text
+                                                        file. ALl of
+                                                        them
+                                                        have
+                                                        some common
+                                                        properties like name, size, and contents of each file has to be
+                                                        obtained(read)
+                                                        before it
+                                                        can
+                                                        be
+                                                        displayed.</p>
+        
+                                                </div>
+        
+                                                <div id="slide_5.1" style="display: none">
+                                                    <p>The common properties and behaviour of the files can be encapsulated
+                                                        within a generic
+                                                        File
+                                                        class. Special
+                                                        type of files can inherit them, as shown in the next scene.</p>
+                                                </div>
+        
+                                                <div id="sequence_diag_5.0" style="display:none">
+                                                    <div class="container">
+                                                        <img src="./images/Page5_image1.png" class="img-fluid">
+                                                    </div>
+                                                </div>
+        
+                                                <div id="sequence_diag_5.1" style="display:none">
+                                                    <div class="container">
+                                                        <img src="./images/Page5_image2.png" class="img-fluid">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+        
+        
+                                        <!--Page 6-->
+                                        <div id="page6" class="page" style="display:none">
+        
+                                            <div class="card-title fs-5 fst-italic fw-bold border border-3 border-primary rounded-3 p-2"
+                                                style="text-align: center; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+                                                6. Identifying Sequence of Activities
+                                            </div>
+                                            <div class="box2">
+                                                <div id="slide_6.0" style="display:none">
+                                                    <p>Now, let us consider how a web browser and a web server communicate. A
+                                                        user types in
+                                                        a
+                                                        URL in
+                                                        the
+                                                        browser, and views the page. But something more happens under the hood
+                                                        to display a
+                                                        page.
+                                                    </p>
+                                                </div>
+                                                <div id="slide_6.1" style="display:none">
+                                                    <p>When a user types in a URL and clicks on the "Go" button, the browser
+                                                        sends a HTTP
+                                                        Request to
+                                                        the
+                                                        concerned web server.</p>
+                                                </div>
+                                                <div id="slide_6.2" style="display:none">
+                                                    <p>
+                                                        When the web server receives a HTTP Request from any client, it sends
+                                                        back a HTTP
+                                                        Response
+                                                        to that
+                                                        client.
+                                                    </p>
+                                                </div>
+                                                <div id="slide_6.3" style="display:none">
+                                                    <p>
+                                                        On receiving a HTTP Response, web browser displays(renders) the
+                                                        requested page.
+                                                    </p>
+                                                </div>
+                                                <div id="slide_6.4" style="display:none">
+                                                    <p>
+                                                        Thus we have identified the two broad activities that take place when we
+                                                        try to view
+                                                        a
+                                                        page
+                                                        on a web
+                                                        browser.
+                                                    </p>
+                                                </div>
+                                                <div id="slide_6.5" style="display:none">
+                                                    <p>
+                                                        In the next scene, we will see how to represent these activities
+                                                        sequentially in a
+                                                        diagram
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+        
+        
+                                        <!--Page 7-->
+                                        <div id="page7" class="page" style="display:none">
+        
+                                            <div class="card-title fs-5 fst-italic fw-bold border border-3 border-primary rounded-3 p-2"
+                                                style="text-align: center; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+                                                7. Drawing Sequence Diagrams
+                                            </div>
+                                            <div class="box2">
+                                                <div id="sequence_diag_7.0" style="display:none">
+                                                    <div class="container">
+                                                        <img src="./images/Page7_image_1.png" class="img-fluid">
+                                                    </div>
+                                                </div>
+                                                <div id="slide_7.0" class="note_box" style="display:none">
+                                                    HTTP Response is shown with a open arrowhead and a dotted line. This
+                                                    indicates that the
+                                                    server
+                                                    is returning
+                                                    a message back to the browser.
+                                                </div>
+                                            </div>
+        
+        
+                                        </div>
+        
+                                   <!-- </div>
+                                </div> -->
+                            </div>
+        
+                            <div class="container">
+                                <!-- <div class="row">
+                                    <div class="col-md-6 offset-md-6"> -->
+                                        <footer>
+                                            <div id="foot">
+                                                <button id="button_0" href="#" onclick="main_play_button()">0</button>
+                                                <button id="button_1" href="#" onclick="loadPage1()">1</button>
+                                                <button id="button_2" href="#" onclick="loadPage2()">2</button>
+                                                <button id="button_3" href="#" onclick="loadPage3()">3</button>
+                                                <button id="button_4" href="#" onclick="loadPage4()">4</button>
+                                                <button id="button_5" href="#" onclick="loadPage5()">5</button>
+                                                <button id="button_6" href="#" onclick="loadPage6()">6</button>
+                                                <button id="button_7" href="#" onclick="loadPage7()">7</button>
+        
+                                                <!--<button id="play2" onclick="toggleSlideshow()"><i class="fa-solid fa-play"></i></button>
+                                                <button id="fast-forward" href="#" onclick="nextPage()"><i class="fa-solid fa-forward"></i></button>-->
+                                            </div>
+        
+                                        </footer>
+                                  <!--  </div>
+                                </div> -->
+                            </div>
+                          
+        
+        
+                        </div>
+                    </div>
+                   
+                </div>
             </div>
-
-
-           <!--  <div class="container p-1 ">
-              <hr>
-            <footer class="text-white text-center" >
-              
-                <p class="text-primary fs-5 text-center" >  Copyright  © 2023  IIT Kharagpur, <a class="text-primary fs-5 text-center " href="http://vlabs.iitkgp.ac.in/">Virtual Lab</a></p>
-             
-            </footer>
-            <hr>
-            </div>
- -->
-</script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/simulation.js"></script>
-</body>
-</html>
+        
+        
+            
+            </script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="js/main.js"></script>
+            <script src="js/simulation.js"></script>
+        </body>
+        
+        </html>

@@ -183,8 +183,21 @@ function removerow(btndel) {
   }
 
 /*************************************************** Function for Draw UML **************************************************/
+var lenobjs,lenmsg;
 function drawbtnex2(){
+lenobjs=arrobjex2.length;
+lenmsg=arrmesg.length;
+/* alert(lenobjs);
+alert(arrobjex2);
+alert(lenmsg);
+alert(arrmesg); */
+if((lenobjs == 2)&&(lenmsg == 3)){
     document.getElementById("dispuml2").style.display="block";
+}
+else{
+    document.getElementById("dispuml2").style.display="none";
+    alert("Enter Object name and message in table 3. \n\n Hint: From the given problem statement, there are two objects and three messages passed between objects.");
+}
 
   var namespace = joint.shapes;
 

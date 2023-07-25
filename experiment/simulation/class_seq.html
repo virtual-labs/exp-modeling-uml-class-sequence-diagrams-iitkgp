@@ -197,12 +197,12 @@ Author: 1. Prakriti Dhang
           <label for="prob3" class="form-label fs-5" style="color: brown; font-weight: bold; text-align: justify;">Draw
             a sequence diagram to graphically represent the following workflow</label>
 
-          <p class="fs-6" style="text-align: justify;">The Web traditionally worked in a client-server model, where a user
-             click on the web browser and web browser would send a HTTP request
-            to the web server, and the server would send back a HTTP response to the browser. The HTTP request
+          <p class="fs-6" style="text-align: justify;">The Web traditionally worked in a client-server model, where a <b>user</b>
+             click on the <b>web browser</b> and web browser would send a HTTP request
+            to the <b>web server</b>, and the server would send back a HTTP response to the browser. The HTTP request
             actually encapsulates the contents of the requested resource in some format. In cases where access
             to a resource is restricted or say, it requires a user authentication, the HTTP request encapsulates
-            the login credentials and sends to the server. The server then checks with the database server if the
+            the login credentials and sends to the server. The server then checks with the <b>database</b> server if the
             credentials are correct. The status of verification is then send back to the browser.</p>
 
           <p class="fs-6" style="text-align: justify;">
@@ -228,7 +228,7 @@ Author: 1. Prakriti Dhang
           </ol>
           
          
-<br>
+         
           <p class="fs-6 fw-bold">Learning Objectives:</p>
           <ul class="fs-6">
             <li>Arranging activities in a logical sequence of their execution
@@ -271,9 +271,9 @@ Author: 1. Prakriti Dhang
                     </thead>
                     <tbody>
                       <tr>
-                        <td><input class="form-control border-primary " type="text" id="inp1"></td>
+                        <td><input placeholder="Enter a Class Name" class="form-control border-primary " type="text" id="inp1"></td>
                         <td style="text-align: center;"><button id="t1addbtn" class="btn btn-primary" type="button"
-                            onclick="addbtnt1()"><i class="bi bi-plus-lg"></i>Add</button></td>
+                            onclick="create_select_options()"><i class="bi bi-plus-lg"></i>Add</button></td>
                       </tr>
                     </tbody>
 
@@ -284,17 +284,225 @@ Author: 1. Prakriti Dhang
 
               <!----------------------------------------------- Table 2 -------------------------------------------------------->
 
+              <form id="ftbl1" class="p-1 bg-white " action="">
+                <label for="table1" class="form-label fs-6" style=" font-weight: bold;">Table #2: Add attributes to classes</label>
+                <div class="table-responsive">
+                  <table id="tbl2" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Select Class</th>
+                      <th>Attribute</th>
+                      <th>Type</th>
+                      <th>Add</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><select class="form-select" name="" id="table_2_select_class"><option disabled selected value="">Select a Class</option></select></td>
+                        <td><input placeholder="Enter an attribute" class="form-control border-primary " type="text" id="inp2"></td>
+                        <td><select class="form-select" name="" id="table_2_type">
+                          <option value="">Integer</option>
+                          <option value="">Float</option>
+                          <option value="">String</option>
+                          <option value="">Long</option>
+                          <option value="">Double</option>
+                          <option value="">Boolean</option>
+                        </select></td>
+                        <td style="text-align: center;"><button id="t1addbtn" class="btn btn-primary" type="button"
+                            onclick="create_attribute()"><i class="bi bi-plus-lg"></i>Add</button></td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                </div> <!-- table 1 responsive div ended for exercise 1-->
+
+              </form>
+
               <!----------------------------------------------- Table 3 -------------------------------------------------------->
+
+              <form id="ftbl1" class="p-1 bg-white " action="">
+                <label for="table1" class="form-label fs-6" style=" font-weight: bold;">Table #3: Add operations to classes</label>
+                <div class="table-responsive">
+                  <table id="tbl3" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Select Class</th>
+                      <th>Operation</th>
+                      <th>Return Type</th>
+                      <th>Add</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><select class="form-select" name="" id="table_3_select_class"><option disabled selected value="">Select a Class</option></select></td>
+                        <td><input placeholder="Enter an operation" class="form-control border-primary " type="text" id="inp3"></td>
+                        <td><select class="form-select" name="" id="table_3_type">
+                          <option value="">Void</option>
+                          <option value="">Integer</option>
+                          <option value="">Float</option>
+                          <option value="">String</option>
+                          <option value="">Long</option>
+                          <option value="">Double</option>
+                          <option value="">Boolean</option>
+                        </select></td>
+                        <td style="text-align: center;"><button id="t1addbtn" class="btn btn-primary" type="button"
+                            onclick="create_operations()"><i class="bi bi-plus-lg"></i>Add</button></td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                </div>
 
               <!----------------------------------------------- Table 4 -------------------------------------------------------->
 
+              <form id="ftbl1" class="p-1 bg-white " action="">
+                <label for="table1" class="form-label fs-6" style=" font-weight: bold;">Table #4: Add generalization/specialization relationships</label>
+                <div class="table-responsive">
+                  <table id="tbl4" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Select Sub-class</th>
+                      <th>Inheritance</th>
+                      <th>Select super-class</th>
+                      <th>Add</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><select class="form-select" name="" id="table_4_0_select_class"><option disabled selected value="">Select a Sub-Class</option></select></td>
+                        <td id="Extends">Extends</td>
+                        <td><select class="form-select" name="" id="table_4_1_select_class">
+                          <option disabled selected value="">Select a Super-Class</option>
+                        </select></td>
+                        <td style="text-align: center;"><button id="t1addbtn" class="btn btn-primary" type="button"
+                            onclick="create_row_in_table_7()"><i class="bi bi-plus-lg"></i>Add</button></td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                </div>
+
               <!----------------------------------------------- Table 5 -------------------------------------------------------->
 
+              <form id="ftbl1" class="p-1 bg-white " action="">
+                <label for="table1" class="form-label fs-6" style=" font-weight: bold;">Table #5: Add association relationships</label>
+                <div class="table-responsive">
+                  <table id="tbl5" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Select Class</th>
+                      <th>Multiplicity(optional)</th>
+                      <th>Association Name(optional)</th>
+                      <th>Association type</th>
+                      <th>Multiplicity(optional)</th>
+                      <th>Association Direction(optional)</th>
+                      <th>Select Class</th>
+                      <th>Add</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><select class="form-select" id="table_5_0_select_class" name="" ><option disabled selected value="">Select a Class</option></select></td>
+                        <td><select class="form-select" id="multiplicity" name="" >
+                          <option value="">Not Specified</option>
+                          <option value="">1</option>
+                          <option value="">2</option>
+                          <option value="">0..1</option>
+                          <option value="">0..*</option>
+                          <option value="">1..*</option>
+                          <option value="">*</option>
+                        </select></td>
+                        <td><input class="form-control border-primary " type="text" id="association"></td>
+                        <td><select class="form-select" name="" id="association_type">
+                          <option value="">Simple Association</option>
+                          <option value="">Navigation Association (to)</option>
+                          <option value="">Aggregation</option>
+                          <option value="">Composition</option>
+                          <option value="">Dependency</option>
+                          </select></td>
+                          <td><select class="form-select" id="multiplicity_2" name="" >
+                            <option value="">Not Specified</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">0..1</option>
+                            <option value="">0..*</option>
+                            <option value="">1..*</option>
+                            <option value="">*</option>
+                          </select></td>
+                          <td><select class="form-select" id="association_direction" name="" >
+                            <option value="">Not Specified</option>
+                            <option value="">TO</option>
+                            <option value="">FROM</option>
+                            </select></td>
+                          <td><select class="form-select" name="" id="table_5_1_select_class"><option disabled selected value="">Select a Class</option></select></td>
+                        <td style="text-align: center;"><button id="t1addbtn" class="btn btn-primary" type="button"
+                            onclick="create_row_in_table_8()"><i class="bi bi-plus-lg"></i>Add</button></td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                </div>
+                <div>
+                  <strong>Tip:</strong> To display a direction, you should name the relationship as well.
+                </div>
+                <br>
+                <br>
               <!----------------------------------------------- Table 6 -------------------------------------------------------->
+
+              <form id="ftbl1" class="p-1 bg-white " action="">
+                <label for="table1" class="form-label fs-6" style=" font-weight: bold;">Table #6: Classes identified for solution</label>
+                <div class="table-responsive">
+                  <table id="tbl6" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Classes</th>
+                      <th>Attributes</th>
+                      <th>Operations</th>
+                      
+                    </thead>
+                    <tbody id = "tbl6_body">
+                      
+                    </tbody>
+
+                  </table>
+                </div>
 
               <!----------------------------------------------- Table 7 -------------------------------------------------------->
 
+              <form id="ftbl1" class="p-1 bg-white " action="">
+                <label for="table1" class="form-label fs-6" style=" font-weight: bold;">Table #7:  Generalization identified for solution</label>
+                <div class="table-responsive">
+                  <table id="tbl7" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Sub-class</th>
+                      <th>Super-class</th>
+                      <th>Remove</th>
+                      
+                      
+                    </thead>
+                    <tbody id ="tbl7_body">
+                      
+                    </tbody>
+
+                  </table>
+                </div>
+
               <!----------------------------------------------- Table 8 -------------------------------------------------------->
+
+              <form id="ftbl1" class="p-1 bg-white " action="">
+                <label for="table1" class="form-label fs-6" style=" font-weight: bold;">Table #8: Relations between classes identified for solution</label>
+                <div class="table-responsive">
+                  <table id="tbl8" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Class</th>
+                      <th>Multiplicity</th>
+                      <th>Relation Name</th>
+                      <th>Relation Type</th>
+                      <th>Multiplicity</th>
+                      <th>Class</th>
+                      <th>Direction</th>
+                      <th>Remove</th>
+                      
+                      
+                    </thead>
+                    <tbody id="tbl8_body">
+                      
+                    </tbody>
+
+                  </table>
+                </div>
+
 
 
               <button id="drawbtn" class="btn btn-primary" type="button" onclick="drawbtex1()"><i
