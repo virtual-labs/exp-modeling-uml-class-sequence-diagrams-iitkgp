@@ -1,1065 +1,436 @@
 /*Redeveloped
 Lab: Software Engineering
-Exp:E-R Modeling from the Problem Statements
+Exp:Modeling UML Class Diagrams and Sequence diagrams
 File Name: simulation.js
-Author: Prakriti Dhang */
+Author: Saptarshi Mondal */
 
-function playsimulation(){
-   
-    document.getElementById("playbtn").disabled=true;
-    document.getElementById("stp1").style.display="block";
-    document.getElementById("p11").style.display="block";
+//let currentPageIndex = null;
 
-    setTimeout(s11, 1000);}
+const button_0 = document.getElementById("button_0");
+const button_1 = document.getElementById("button_1");
+const button_2 = document.getElementById("button_2");
+const button_3 = document.getElementById("button_3");
+const button_4 = document.getElementById("button_4");
+const button_5 = document.getElementById("button_5");
+const button_6 = document.getElementById("button_6");
+const button_7 = document.getElementById("button_7");
 
-    function s11(){
-    document.getElementById("s1").style.display="block";
-    document.getElementById("nextbtn").style.display="block";
-    document.getElementById("nextbtn").disabled=true;
-    document.getElementById("prebtn").disabled=true;
-    document.getElementById("stp1").disabled=false;
+const buttons = [button_0, button_1, button_2, button_3, button_4, button_5, button_6, button_7];
 
-    setTimeout(s12, 1000);
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].disabled = false;
+}
+
+
+function disabling_other_buttons() {
+  for (let i = 0; i < buttons.length; i++) {
+    if (buttons[i].disabled === true) {
+      buttons[i].disabled = false;
     }
-
-    function s12(){
-        document.getElementById("s2").style.display="block";   
-        setTimeout(s13, 1000);
-    }
-
- function s13(){
-    document.getElementById("s3").style.display="block";
-    setTimeout(s14, 1000);
- }
- function s14(){
-    document.getElementById("s4").style.display="block";
-    setTimeout(s15, 1000);
- }
-function s15(){
-    document.getElementById("s5").style.display="block";
-    document.getElementById("nextbtn").disabled=false;
+  }
 }
 
 
+function main_play_button() {
+  //currentPageIndex = 0;
+  disabling_other_buttons();
+  buttons[0].disabled = true;
+  document.getElementById("play").style.display = "none";
+  document.getElementById("slideshow0").style.display = "block";
 
-//var count=0;
-//var countnxtbtn;
-function gonext(){ // Para 2 
-   // count++;
-    //countnxtbtn=count;
-     //if(countnxtbtn == 1){
-        document.getElementById("nextbtn1").disabled=true;
-        document.getElementById("p11").style.display="none";
-        document.getElementById("p2").style.display="block";
-        document.getElementById("s1a").style.display="block";
-        document.getElementById("head1").innerText="Identify Entity sets and Attributes";
-          setTimeout(stp1b, 1000);
+  document.getElementById("List_0").style.display = "block";
 
-    function stp1b(){
-        document.getElementById("s1b").style.display="block";
-         setTimeout(stp1c, 1000);
-    }
+  setTimeout(() => {
+    document.getElementById("List_0.1").style.display = "block";
+  }, 2000);
 
- function stp1c(){
-    document.getElementById("s1c").style.display="block";
-    document.getElementById("nextbtn1").disabled=false;
-    document.getElementById("prebtn1").disabled=false;
-    
- }
-}
-    
-//}
+  setTimeout(() => {
+    document.getElementById("List_0.2").style.display = "block";
+  }, 4000);
 
-//if(countnxtbtn == 2)
-function gonext1(){ //para 3
-    document.getElementById("nextbtn2").disabled=true;
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="block";
-    document.getElementById("s1d").style.display="block";
-    document.getElementById("head1").innerText="Identify Entity sets and Attributes";
-    setTimeout(stp1e, 1000);
+  setTimeout(() => {
+    document.getElementById("List_0.3").style.display = "block";
+  }, 6000);
 
-function stp1e(){
-    document.getElementById("s1e").style.display="block";
-     setTimeout(stp1f, 1000);
-}
+  setTimeout(() => {
+    document.getElementById("List_0.4").style.display = "block";
+  }, 8000);
 
-function stp1f(){
-document.getElementById("s1f").style.display="block";
-document.getElementById("nextbtn2").disabled=false;
-document.getElementById("prebtn2").disabled=false;
+  setTimeout(() => {
+    document.getElementById("List_0.5").style.display = "block";
+  }, 10000);
 
+  setTimeout(() => {
+    document.getElementById("List_0.6").style.display = "block";
+  }, 12000);
 
-}
+  setTimeout(() => {
+    document.getElementById("List_0.7").style.display = "block";
+  }, 14000);
 
-
-}
-
-/*if(countnxtbtn == 3) */
-function gonext2(){ //para4
-    document.getElementById("nextbtn3").disabled=true;
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p4").style.display="block";
-    document.getElementById("s1g").style.display="block";
-    document.getElementById("head1").innerText="Identify Entity sets and Attributes";
-    setTimeout(stp1h, 1000);
-
-function stp1h(){
-    document.getElementById("s1h").style.display="block";
-    setTimeout(stp1i, 1000);
-}
-
-function stp1i(){
-document.getElementById("s1i").style.display="block";
-document.getElementById("nextbtn3").disabled=false;
-document.getElementById("prebtn3").disabled=false;
-
-
-}
-
-
-}
-
-
-//if(countnxtbtn == 4)
-function gonext3(){ //para 5
-    document.getElementById("nextbtn4").disabled=true;
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p5").style.display="block";
-    document.getElementById("s1j").style.display="block";
-    document.getElementById("head1").innerText="Identify Entity sets and Attributes";
-    setTimeout(stp1k, 1000);
-
-function stp1k(){
-    document.getElementById("s1k").style.display="block";
-    setTimeout(stp1l, 1000);
-}
-
-function stp1l(){
-document.getElementById("s1l").style.display="block";
-setTimeout(stp1m, 1000);
-
-
-}
-
-function stp1m(){
-    document.getElementById("s1m").style.display="block";
-    document.getElementById("nextbtn4").disabled=false;
-    document.getElementById("prebtn4").disabled=false;
-
-    
-
-    }
-
+  setTimeout(() => { buttons[0].disabled = false; }, 17000);
+  setTimeout(() => { document.getElementById("slideshow0").style.display = "none" }, 17000);
+  setTimeout(() => { document.getElementById("List_0").style.display = "none" }, 17000);
+  setTimeout(() => { document.getElementById("List_0.1").style.display = "none" }, 17000);
+  setTimeout(() => { document.getElementById("List_0.2").style.display = "none" }, 17000);
+  setTimeout(() => { document.getElementById("List_0.3").style.display = "none" }, 17000);
+  setTimeout(() => { document.getElementById("List_0.4").style.display = "none" }, 17000);
+  setTimeout(() => { document.getElementById("List_0.5").style.display = "none" }, 17000);
+  setTimeout(() => { document.getElementById("List_0.6").style.display = "none" }, 17000);
+  setTimeout(() => { document.getElementById("List_0.7").style.display = "none" }, 17000);
 
 
 
 }
-/// if(countnxtbtn == 5)
-function gonextstep2(){ //para 6
-    document.getElementById("nextbtn5").disabled=true;
-    document.getElementById("p5").style.display="none";
-    document.getElementById("stp1").disabled=false;
-    document.getElementById("stp2").style.display="block";
-    document.getElementById("stp2").disabled=false;
-    document.getElementById("head1").innerText="Draw Entity";
-    document.getElementById("p6").style.display="block";
-    
-    
-     setTimeout(shwprimarykey, 1500);
-   
-
-    
-
-    function shwprimarykey(){
-      
-       
-        document.getElementById("primarykey1").style.display="block";
-        
-        setTimeout(nexter2, 1500);
-    }
-
-    
-
-    function nexter2(){
-       
-        
-        document.getElementById("nextbtn5").disabled=false;
-        document.getElementById("prebtn5").disabled=false;
-    }
-     
-}
-
-
-//}
-
-function gonext2a(){
-    document.getElementById("nextbtn6").disabled=true;
-    document.getElementById("p6").style.display="none";
-    document.getElementById("stp1").disabled=false;
-    document.getElementById("stp2").style.display="block";
-    document.getElementById("stp2").disabled=false;
-    document.getElementById("head1").innerText="Draw Entity";
-    document.getElementById("p7").style.display="block"; 
-
-    setTimeout(shwprimarykey2, 1500);
-   
-
-    
-
-    function shwprimarykey2(){
-      
-       
-        document.getElementById("primarykey2").style.display="block";
-        
-        setTimeout(nexter2, 1500);
-    }
-
-    
-
-    function nexter2(){
-       
-        
-        document.getElementById("nextbtn6").disabled=false;
-        document.getElementById("prebtn6").disabled=false;
-}
-
-}
-
-function gonext2b(){
-    document.getElementById("nextbtn7").disabled=true;
-    document.getElementById("p7").style.display="none";
-    document.getElementById("stp1").disabled=false;
-    document.getElementById("stp2").style.display="block";
-    document.getElementById("stp2").disabled=false;
-    document.getElementById("head1").innerText="Draw Entity";
-    document.getElementById("p8").style.display="block"; 
-
-    setTimeout(shwprimarykey3, 1500);
-   
-
-    
-
-    function shwprimarykey3(){
-      
-       
-        document.getElementById("primarykey3").style.display="block";
-        
-        setTimeout(nexter3, 1500);
-    }
-
-    
-
-    function nexter3(){
-       
-        
-        document.getElementById("nextbtn7").disabled=false;
-        document.getElementById("prebtn7").disabled=false;
-}
-
-}
-
-
-function gonext2c(){
-    document.getElementById("nextbtn8").disabled=true;
-    document.getElementById("p8").style.display="none";
-    document.getElementById("stp1").disabled=false;
-    document.getElementById("stp2").style.display="block";
-    document.getElementById("stp2").disabled=false;
-    document.getElementById("head1").innerText="Draw Entity";
-    document.getElementById("p9").style.display="block"; 
-
-    setTimeout(shwprimarykey4, 1500);
-   
-
-    
-
-    function shwprimarykey4(){
-      
-       
-        document.getElementById("primarykey4").style.display="block";
-        
-        setTimeout(nexter4, 1500);
-    }
-
-    
-
-    function nexter4(){
-       
-        
-        document.getElementById("nextbtn8").disabled=false;
-        document.getElementById("prebtn8").disabled=false;
-}
-
-}
-
-
-function gonextstep3(){
-    document.getElementById("nextbtn9").disabled=true;
-    document.getElementById("p9").style.display="none";
-    document.getElementById("stp1").disabled=false;
-    document.getElementById("stp2").style.display="block";
-    document.getElementById("stp2").disabled=false;
-    document.getElementById("stp3").style.display="block";
-    document.getElementById("stp3").disabled=false;
+function showPage(pageId) {
+  // Get all the page elements
+  const pages = document.querySelectorAll('.page');
   
-    document.getElementById("head1").innerText="Identify Relationaship";
-    document.getElementById("p10").style.display="block"; 
-   
 
-    setTimeout(nextir1, 1500);
-   
-    function nextir1(){
-      
-       
-        document.getElementById("ir1").style.display="block";
-        
-        setTimeout(nextir2, 2000);
+  // Loop through each page
+  pages.forEach(page => {
+    // Check if the current page is the one to be shown
+    if (page.id === pageId) {
+      // Set display property to 'block' for the desired page
+      page.style.display = 'block';
+    } else {
+      // Set display property to 'none' for other pages
+      page.style.display = 'none';
+    }
+  });
+}
+
+function loadPage1() {
+  //currentPageIndex = 1;
+  disabling_other_buttons();
+
+  document.getElementById("page1").style.display = "block";
+  //document.getElementById("slideshow1.0").style.display = "block";
+  showPage("page1");
+
+  //disabling the button_1 for the time being
+
+
+  buttons[1].disabled = true;
+
+
+  document.getElementById("slideshow1.0").style.display = "block";
+  setTimeout(() => { document.getElementById("List1.0").style.display = "block"; }, 2000);
+  setTimeout(() => { document.getElementById("List1.1").style.display = "block"; }, 2000);
+  setTimeout(() => { document.getElementById("List1.2").style.display = "block"; }, 6000);
+  setTimeout(() => { document.getElementById("List1.3").style.display = "block"; }, 8000);
+  setTimeout(() => { document.getElementById("List1.4").style.display = "block"; }, 10000);
+  setTimeout(() => { document.getElementById("List1.5").style.display = "block"; }, 12000);
+  setTimeout(() => { document.getElementById("Slideshow1.1").style.display = "block"; }, 12000);
+
+  setTimeout(() => { document.getElementById("slideshow1.0").style.display = "none"; }, 14000);
+  setTimeout(() => { document.getElementById("List1.0").style.display = "none"; }, 14000);
+  setTimeout(() => { document.getElementById("List1.1").style.display = "none"; }, 14000);
+  setTimeout(() => { document.getElementById("List1.2").style.display = "none"; }, 14000);
+  setTimeout(() => { document.getElementById("List1.3").style.display = "none"; }, 14000);
+  setTimeout(() => { document.getElementById("List1.4").style.display = "none"; }, 14000);
+  setTimeout(() => { document.getElementById("List1.5").style.display = "none"; }, 14000);
+  setTimeout(() => { document.getElementById("Slideshow1.1").style.display = "none"; }, 14000);
+  setTimeout(() => { document.getElementById("Slideshow1.2").style.display = "block"; }, 14000);
+
+  setTimeout(() => { document.getElementById("Slideshow1.2").style.display = "none"; }, 16000);
+  setTimeout(() => { document.getElementById("Slideshow1.3").style.display = "block"; }, 16000);
+  setTimeout(() => { document.getElementById("Slideshow1.3.1").style.display = "block"; }, 16000);
+  setTimeout(() => { document.getElementById("Lt1.0").style.display = "block"; }, 18000);
+  setTimeout(() => { document.getElementById("Lt1.1").style.display = "block"; }, 18000);
+  setTimeout(() => { document.getElementById("Lt1.2").style.display = "block"; }, 20000);
+  setTimeout(() => { document.getElementById("Lt1.3").style.display = "block"; }, 22000);
+
+  setTimeout(() => { document.getElementById("Slideshow1.3.1").style.display = "none"; }, 24000);
+  setTimeout(() => { document.getElementById("Lt1.0").style.display = "none"; }, 24000);
+  setTimeout(() => { document.getElementById("Lt1.1").style.display = "none"; }, 24000);
+  setTimeout(() => { document.getElementById("Lt1.2").style.display = "none"; }, 24000);
+  setTimeout(() => { document.getElementById("Lt1.3").style.display = "none"; }, 24000);
+
+  setTimeout(() => { document.getElementById("Slideshow1.4.1").style.display = "block"; }, 24000);
+  setTimeout(() => { document.getElementById("Lt1.1.0").style.display = "block"; }, 26000);
+  setTimeout(() => { document.getElementById("Lt1.1.1").style.display = "block"; }, 26000);
+  setTimeout(() => { document.getElementById("Lt1.1.2").style.display = "block"; }, 28000);
+
+  setTimeout(() => { document.getElementById("Slideshow1.5").style.display = "block"; }, 32000);
+
+  setTimeout(() => { document.getElementById("Slideshow1.3").style.display = "none"; }, 34000);
+  setTimeout(() => { document.getElementById("Slideshow1.4.1").style.display = "none"; }, 34000);
+  setTimeout(() => { document.getElementById("Lt1.1.0").style.display = "none"; }, 34000);
+  setTimeout(() => { document.getElementById("Lt1.1.1").style.display = "none"; }, 34000);
+  setTimeout(() => { document.getElementById("Lt1.1.2").style.display = "none"; }, 34000);
+
+  setTimeout(() => { document.getElementById("Slideshow1.5").style.display = "none"; }, 34000);
+
+  setTimeout(() => { document.getElementById("Slideshow1.6").style.display = "block"; }, 34000);
+  setTimeout(() => { document.getElementById("Slideshow1.6").style.display = "none"; }, 36000);
+  setTimeout(() => { document.getElementById("Slideshow1.7").style.display = "block"; }, 36000);
+
+  setTimeout(() => { document.getElementById("Slideshow1.7").style.display = "none"; }, 38000);
+  setTimeout(() => { document.getElementById("Slideshow1.8").style.display = "block"; }, 38000);
+
+  setTimeout(() => { document.getElementById("Slideshow1.8").style.display = "none"; }, 40000);
+  setTimeout(() => { document.getElementById("Slideshow1.9").style.display = "block"; }, 40000);
+
+  setTimeout(() => { document.getElementById("Slideshow1.10").style.display = "block"; }, 42000);
+  setTimeout(() => { document.getElementById("Slideshow1.9").style.display = "none"; }, 42000);
+
+  setTimeout(() => { document.getElementById("Slideshow1.10").style.display = "none"; }, 44000);
+  setTimeout(() => { document.getElementById("Slideshow1.11").style.display = "block"; }, 44000);
+  setTimeout(() => { document.getElementById("Slideshow1.12").style.display = "block"; }, 46000);
+
+  setTimeout(() => { buttons[1].disabled = false; }, 46000);
+  setTimeout(() => { document.getElementById("Slideshow1.11").style.display = "none"; }, 49000);
+  setTimeout(() => { document.getElementById("Slideshow1.12").style.display = "none"; }, 49000);
+
+
+}
+
+function loadPage2() {
+  //currentPageIndex = 2;
+  showPage("page2");
+  disabling_other_buttons();
+
+  buttons[2].disabled = true;
+
+  document.getElementById("slideshow2.0").style.display = "block";
+
+  setTimeout(() => { document.getElementById("slideshow2.0").style.display = "none"; }, 2000);
+  setTimeout(() => { document.getElementById("Slideshow2.1").style.display = "block"; }, 2000);
+  setTimeout(() => { document.getElementById("sequence_diag_1").style.display = "block"; }, 4000);
+
+
+  setTimeout(() => { document.getElementById("Slideshow2.1").style.display = "none"; }, 6000);
+  setTimeout(() => { document.getElementById("sequence_diag_1").style.display = "none"; }, 6000);
+  setTimeout(() => { document.getElementById("Slideshow2.2").style.display = "block"; }, 6000);
+
+  setTimeout(() => { document.getElementById("sequence_diag_1.1").style.display = "block"; }, 8000);
+
+  setTimeout(() => { document.getElementById("sequence_diag_1.1").style.display = "none"; }, 11000);
+  setTimeout(() => { document.getElementById("Slideshow2.2").style.display = "none"; }, 11000);
+
+  setTimeout(() => { document.getElementById("Slideshow2.3").style.display = "block"; }, 11000);
+  setTimeout(() => { document.getElementById("sequence_diag_2").style.display = "block"; }, 14000);
+
+  setTimeout(() => { buttons[2].disabled = false; }, 16000);
+  setTimeout(() => { document.getElementById("Slideshow2.3").style.display = "none"; }, 16000);
+  setTimeout(() => { document.getElementById("sequence_diag_2").style.display = "none"; }, 16000);
+
+
+}
+
+function loadPage3() {
+  //currentPageIndex = 3;
+  showPage("page3");
+  disabling_other_buttons();
+
+  buttons[3].disabled = true;
+
+  document.getElementById("slide_0").style.display = "block";
+
+
+  setTimeout(() => { document.getElementById("sequence_diag_3.0").style.display = "block"; }, 3000);
+
+  setTimeout(() => { buttons[3].disabled = false; }, 3000);
+
+  setTimeout(() => { document.getElementById("slide_0").style.display = "none"; }, 6000);
+  setTimeout(() => { document.getElementById("sequence_diag_3.0").style.display = "none"; }, 6000);
+
+}
+
+function loadPage4() {
+ // currentPageIndex = 4;
+  showPage("page4");
+  disabling_other_buttons();
+  buttons[4].disabled = true;
+  document.getElementById("slide_4.0").style.display = "block";
+
+
+  setTimeout(() => { document.getElementById("sequence_diag_4.0").style.display = "block"; }, 3000);
+
+  setTimeout(() => { buttons[4].disabled = false }, 6000);
+  setTimeout(() => { document.getElementById("sequence_diag_4.0").style.display = "none" }, 6000);
+  setTimeout(() => { document.getElementById("slide_4.0").style.display = "none" }, 6000);
+
+
+}
+
+function loadPage5() {
+ // currentPageIndex = 5;
+  showPage("page5");
+  disabling_other_buttons();
+  buttons[5].disabled = true;
+
+  document.getElementById("slide_5.0").style.display = "block";
+
+  setTimeout(() => { document.getElementById("slide_5.1").style.display = "block" }, 3000);
+
+  setTimeout(() => { document.getElementById("slide_5.1").style.display = "none" }, 6000);
+  setTimeout(() => { document.getElementById("slide_5.0").style.display = "none" }, 6000);
+
+  setTimeout(() => { document.getElementById("sequence_diag_5.0").style.display = "block" }, 6000);
+
+  setTimeout(() => { document.getElementById("sequence_diag_5.0").style.display = "none" }, 9000);
+  setTimeout(() => { document.getElementById("sequence_diag_5.1").style.display = "block" }, 9000);
+
+  setTimeout(() => { buttons[5].disabled = false }, 11000);
+  setTimeout(() => { document.getElementById("sequence_diag_5.1").style.display = "none" }, 11000);
+
+
+
+}
+
+function loadPage6() {
+  //currentPageIndex = 6;
+  showPage("page6");
+  disabling_other_buttons();
+  buttons[6].disabled = true;
+
+  document.getElementById("slide_6.0").style.display = "block";
+
+  setTimeout(() => { document.getElementById("slide_6.1").style.display = "block" }, 2500);
+  setTimeout(() => { document.getElementById("slide_6.2").style.display = "block" }, 5000);
+  setTimeout(() => { document.getElementById("slide_6.3").style.display = "block" }, 7500);
+
+  setTimeout(() => { document.getElementById("slide_6.0").style.display = "none" }, 10000);
+  setTimeout(() => { document.getElementById("slide_6.1").style.display = "none" }, 10000);
+  setTimeout(() => { document.getElementById("slide_6.2").style.display = "none" }, 10000);
+  setTimeout(() => { document.getElementById("slide_6.3").style.display = "none" }, 10000);
+
+  setTimeout(() => { document.getElementById("slide_6.4").style.display = "block" }, 10000);
+  setTimeout(() => { document.getElementById("slide_6.5").style.display = "block" }, 12500);
+
+  setTimeout(() => { buttons[6].disabled = false }, 15000);
+  setTimeout(() => { document.getElementById("slide_6.4").style.display = "none" }, 15000);
+  setTimeout(() => { document.getElementById("slide_6.5").style.display = "none" }, 15000);
+
+
+}
+
+function loadPage7() {
+  currentPageIndex = 7;
+  showPage("page7");
+  disabling_other_buttons();
+  buttons[7].disabled = true;
+
+  document.getElementById("sequence_diag_7.0").style.display = "block";
+
+  setTimeout(() => { document.getElementById("slide_7.0").style.display = "block" }, 3000);
+
+  setTimeout(() => { buttons[7].disabled = false; }, 6000);
+  setTimeout(() => { document.getElementById("slide_7.0").style.display = "none" }, 6000);
+  setTimeout(() => { document.getElementById("sequence_diag_7.0").style.display = "none" }, 6000);
+}
+
+/*** function play_and_pause() {
+  let remainingTime = 0;
+  let timeoutId;
+
+  function startTimeout(delay) {
+    timeoutId = setTimeout(() => {
+      console.log("Timeout completed.");
+    }, delay);
+  }
+
+  function pauseTimeout() {
+    clearTimeout(timeoutId);
+    remainingTime = delay - (Date.now() - startTime);
+  }
+
+  function resumeTimeout() {
+    startTimeout(remainingTime);
+  }
+}
+
+function next(){
+  const pages = document.querySelectorAll('.page');
+
+}
+
+function showPage(pageId) {
+  // Get all the page elements
+  const pages = document.querySelectorAll('.page');
+  pages.forEach(page => {
+    // Check if the current page is the one to be shown
+    if (page.id === pageId) {
+      // Set display property to 'block' for the desired page
+      page.style.display = 'block';
+    } else {
+      // Set display property to 'none' for other pages
+      page.style.display = 'none';
     }
 
-
-    function nextir2(){
-      
-       
-        document.getElementById("ir2").style.display="block";
-        
-        setTimeout(nextir3, 2000);
+  // Loop through each page
+  pages.forEach(page => {
+    // Check if the current page is the one to be shown
+    if (page.id === pageId) {
+      // Set display property to 'block' for the desired page
+      page.style.display = 'block';
+    } else {
+      // Set display property to 'none' for other pages
+      page.style.display = 'none';
     }
+  });
+}   
+
+const pages = document.getElementsByClassName("page");
 
 
+const fast_forward = document.getElementById("fast-forward");
 
-    function nextir3(){
-      
-       
-        document.getElementById("ir3").style.display="block";
-        
-        setTimeout(nextir4, 2000);
+function nextPage()
+{
+  
+    if (currentPageIndex <= pages.length - 1) {
+      showPage((currentPageIndex + 1) % pages.length);
     }
-
-
-    function nextir4(){
-      
-       
-        document.getElementById("ir4").style.display="block";
-        
-        setTimeout(shwentityrel, 2000);
-    }
-
-
     
-   
-    function shwentityrel(){
-      
-       
-        document.getElementById("entityrel").style.display="block";
-        
-        setTimeout(nexter5, 1500);
-    }
+}
+function showPage(index) {
+  Array.from(pages).forEach((page) => {
+    page.style.display = "none";
+  });
 
-    
+  pages[index].style.display = "block";
+  currentPageIndex = index;
 
-    function nexter5(){
-       
-        
-        document.getElementById("nextbtn9").disabled=false;
-        document.getElementById("prebtn9").disabled=false;
+  updateButtonState();
+}
+function updateButtonState() {
+  //previousButton.disabled = currentPageIndex === 0;
+  fast_forward.disabled = currentPageIndex === pages.length - 1;
 }
 
-}
-
-
-function gonextstep4(){
-    document.getElementById("nextbtn10").disabled=true;
-    document.getElementById("p10").style.display="none";
-    document.getElementById("stp1").disabled=false;
-    document.getElementById("stp2").style.display="block";
-    document.getElementById("stp2").disabled=false;
-    document.getElementById("stp3").style.display="block";
-    document.getElementById("stp3").disabled=false;
-    document.getElementById("stp4").style.display="block";
-    document.getElementById("stp4").disabled=false;
-    document.getElementById("head1").innerText="Draw Relationships";
-    document.getElementById("p111").style.display="block"; 
-
-    setTimeout(shwmappingrel, 1500);
-   
-
-    
-
-    function shwmappingrel(){
-      
-       
-        document.getElementById("mappingrel").style.display="block";
-        
-        setTimeout(nexter6, 1500);
-    }
-
-    
-
-    function nexter6(){
-       
-        
-        document.getElementById("nextbtn10").disabled=false;
-        document.getElementById("prebtn10").disabled=false;
-}
-
-}
-
-
-function gonextstep5(){
-    document.getElementById("nextbtn11").disabled=true;
-    document.getElementById("p111").style.display="none";
-    document.getElementById("stp1").disabled=false;
-    document.getElementById("stp2").style.display="block";
-    document.getElementById("stp2").disabled=false;
-    document.getElementById("stp3").style.display="block";
-    document.getElementById("stp3").disabled=false;
-    document.getElementById("stp4").style.display="block";
-    document.getElementById("stp4").disabled=false;
-    document.getElementById("stp5").style.display="block";
-    document.getElementById("stp5").disabled=false;
-    document.getElementById("head1").innerText="Identify Mapping Cardinalities and Represent them";
-    document.getElementById("p12").style.display="block"; 
-
-    setTimeout(shwstdschool, 1500);
-   
-
-    
-
-    function shwstdschool(){
-      
-       
-        document.getElementById("stdschool").style.display="block";
-        
-        setTimeout(nexter7, 1500);
-    }
-
-    
-
-    function nexter7(){
-       
-        
-        document.getElementById("nextbtn11").disabled=false;
-        document.getElementById("prebtn11").disabled=false;
-}
-
-}
-
-
-function gonext5a(){
-    document.getElementById("nextbtn12").disabled=true;
-    document.getElementById("p12").style.display="none";
-    document.getElementById("stp1").disabled=false;
-    document.getElementById("stp2").style.display="block";
-    document.getElementById("stp2").disabled=false;
-    document.getElementById("stp3").style.display="block";
-    document.getElementById("stp3").disabled=false;
-    document.getElementById("stp4").style.display="block";
-    document.getElementById("stp4").disabled=false;
-    document.getElementById("stp5").style.display="block";
-    document.getElementById("stp5").disabled=false;
-    document.getElementById("head1").innerText="Identify Mapping Cardinalities and Represent them";
-    document.getElementById("p13").style.display="block"; 
-
-    setTimeout(shwfactschool, 1500);
-   
-
-    
-
-    function shwfactschool(){
-      
-       
-        document.getElementById("factschool").style.display="block";
-        
-        setTimeout(nexter8, 1500);
-    }
-
-    
-
-    function nexter8(){
-       
-        
-        document.getElementById("nextbtn12").disabled=false;
-        document.getElementById("prebtn12").disabled=false;
-}
-
-}
-
-
-function gonext5b(){
-    document.getElementById("nextbtn13").disabled=true;
-    document.getElementById("p13").style.display="none";
-    document.getElementById("stp1").disabled=false;
-    document.getElementById("stp2").style.display="block";
-    document.getElementById("stp2").disabled=false;
-    document.getElementById("stp3").style.display="block";
-    document.getElementById("stp3").disabled=false;
-    document.getElementById("stp4").style.display="block";
-    document.getElementById("stp4").disabled=false;
-    document.getElementById("stp5").style.display="block";
-    document.getElementById("stp5").disabled=false;
-    document.getElementById("head1").innerText="Identify Mapping Cardinalities and Represent them";
-    document.getElementById("p14").style.display="block"; 
-
-    setTimeout(shwcoursfact, 1500);
-   
-
-    
-
-    function shwcoursfact(){
-      
-       
-        document.getElementById("coursfact").style.display="block";
-        
-        setTimeout(nexter9, 1500);
-    }
-
-    
-
-    function nexter9(){
-       
-        
-        document.getElementById("nextbtn13").disabled=false;
-        document.getElementById("prebtn13").disabled=false;
-}
-
-}
-
-function gonext5c(){
-    
-    document.getElementById("p14").style.display="none";
-    document.getElementById("stp1").disabled=false;
-    document.getElementById("stp2").style.display="block";
-    document.getElementById("stp2").disabled=false;
-    document.getElementById("stp3").style.display="block";
-    document.getElementById("stp3").disabled=false;
-    document.getElementById("stp4").style.display="block";
-    document.getElementById("stp4").disabled=false;
-    document.getElementById("stp5").style.display="block";
-    document.getElementById("stp5").disabled=false;
-    document.getElementById("head1").innerText="Identify Mapping Cardinalities and Represent them";
-    document.getElementById("p15").style.display="block"; 
-
-    setTimeout(shwcousrstd, 1500);
-   
-
-    
-
-    function shwcousrstd(){
-      
-       
-        document.getElementById("cousrstd").style.display="block";
-        
-        setTimeout(nexter10, 1500);
-    }
-
-    
-
-    function nexter10(){
-       
-        document.getElementById("prebtn14").disabled=false;
-        document.getElementById("replaybtn").style.display="block";
-        document.getElementById("replaybtn").disabled=false;
-}
-
-}
-
-
-
-
-function goback1(){
-   
-    document.getElementById("p11").style.display="block";
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="none";
-    document.getElementById("p111").style.display="none";
-    document.getElementById("p12").style.display="none";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
-
-    setTimeout(s11, 1000);}
-
-    function s11(){
-    document.getElementById("s1").style.display="block";
-    document.getElementById("nextbtn").style.display="block";
-    document.getElementById("nextbtn").disabled=true;
-    document.getElementById("prebtn").disabled=true;
-    document.getElementById("stp1").disabled=false;
-
-    setTimeout(s12, 1000);
-    }
-
-    function s12(){
-        document.getElementById("s2").style.display="block";
-        setTimeout(s13, 1000);
-    }
-
- function s13(){
-    document.getElementById("s3").style.display="block";
-    setTimeout(s14, 1000);
- }
- function s14(){
-    document.getElementById("s4").style.display="block";
-    setTimeout(s15, 1000);
- }
-function s15(){
-    document.getElementById("s5").style.display="block";
-    document.getElementById("nextbtn").disabled=false;
-
-}
-
-function goback2(){
-   
-    document.getElementById("nextbtn1").disabled=true;
-    document.getElementById("p11").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p2").style.display="block";
-    document.getElementById("s1a").style.display="block";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="none";
-    document.getElementById("p111").style.display="none";
-    document.getElementById("p12").style.display="none";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
-    document.getElementById("head1").innerText="Identify Entity sets and Attributes";
-    setTimeout(stp1b, 1000);
-
-function stp1b(){
-    document.getElementById("s1b").style.display="block";
-    setTimeout(stp1c, 1000);
-}
-
-function stp1c(){
-document.getElementById("s1c").style.display="block";
-document.getElementById("nextbtn1").disabled=false;
-document.getElementById("prebtn1").disabled=false;
-
-}
-
-}
-
-function goback3(){
-   
-    document.getElementById("nextbtn2").disabled=true;
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p11").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p3").style.display="block";
-    document.getElementById("s1d").style.display="block";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="none";
-    document.getElementById("p111").style.display="none";
-    document.getElementById("p12").style.display="none";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
-    document.getElementById("head1").innerText="Identify Entity sets and Attributes";
-   setTimeout(stp1e, 1000);
-
-function stp1e(){
-    document.getElementById("s1e").style.display="block";
-   setTimeout(stp1f, 1000);
-}
-
-function stp1f(){
-document.getElementById("s1f").style.display="block";
-document.getElementById("nextbtn2").disabled=false;
-document.getElementById("prebtn2").disabled=false;
-
-
-}
-
-}
-
-function goback4(){
-    document.getElementById("nextbtn3").disabled=true;
-    document.getElementById("p11").style.display="none";
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p4").style.display="block";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="none";
-    document.getElementById("p111").style.display="none";
-    document.getElementById("p12").style.display="none";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
-    document.getElementById("s1g").style.display="block";
-    document.getElementById("head1").innerText="Identify Entity sets and Attributes";
-    setTimeout(stp1h, 1000);
-
-function stp1h(){
-    document.getElementById("s1h").style.display="block";
-     setTimeout(stp1i, 1000);
-}
-
-function stp1i(){
-document.getElementById("s1i").style.display="block";
-document.getElementById("nextbtn3").disabled=false;
-document.getElementById("prebtn3").disabled=false;
-
-
-}
-
-}
-function goback5(){
-    document.getElementById("nextbtn4").disabled=true;
-    document.getElementById("p11").style.display="none";
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p5").style.display="block";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="none";
-    document.getElementById("p111").style.display="none";
-    document.getElementById("p12").style.display="none";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
-    document.getElementById("s1j").style.display="block";
-    document.getElementById("head1").innerText="Identify Entity sets and Attributes";
-    setTimeout(stp1k, 1000);
-
-function stp1k(){
-    document.getElementById("s1k").style.display="block";
-     setTimeout(stp1l, 1000);
-}
-
-function stp1l(){
-document.getElementById("s1l").style.display="block";
- setTimeout(stp1m, 1000);
-
-
-}
-
-function stp1m(){
-    document.getElementById("s1m").style.display="block";
-    document.getElementById("nextbtn4").disabled=false;
-    document.getElementById("prebtn4").disabled=false;
-
-    
-
-    }
-
-}
-
-
-
-function goback6(){
-    document.getElementById("p11").style.display="none";
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="block";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="none";
-    document.getElementById("p111").style.display="none";
-    document.getElementById("p12").style.display="none";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
-}
-
-function goback7(){
-    document.getElementById("p11").style.display="none";
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p7").style.display="block";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="none";
-    document.getElementById("p111").style.display="none";
-    document.getElementById("p12").style.display="none";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
-}
-
-function goback8(){
-    document.getElementById("p11").style.display="none";
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="block";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="none";
-    document.getElementById("p111").style.display="none";
-    document.getElementById("p12").style.display="none";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
-}
-
-function goback9(){
-    document.getElementById("p11").style.display="none";
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="block";
-    document.getElementById("p10").style.display="none";
-    document.getElementById("p111").style.display="none";
-    document.getElementById("p12").style.display="none";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
-}
-
-function goback10(){
-    document.getElementById("p11").style.display="none";
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="block";
-    document.getElementById("p111").style.display="none";
-    document.getElementById("p12").style.display="none";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
-}
-
-
-function goback11(){
-    document.getElementById("p11").style.display="none";
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="none";
-    document.getElementById("p111").style.display="block";
-    document.getElementById("p12").style.display="none";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
-}
-
-function goback12(){
-    document.getElementById("p11").style.display="none";
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="none";
-    document.getElementById("p111").style.display="none";
-    document.getElementById("p12").style.display="block";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
-}
-
-function goback13(){
-    document.getElementById("p11").style.display="none";
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="none";
-    document.getElementById("p111").style.display="none";
-    document.getElementById("p12").style.display="none";
-    document.getElementById("p13").style.display="block";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
-
-}
-
-function goback14(){
-    document.getElementById("p11").style.display="none";
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="none";
-    document.getElementById("p111").style.display="none";
-    document.getElementById("p12").style.display="none";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="block";
-    document.getElementById("p15").style.display="none";
-}
-
-/* start from step 1 */
-function gostep1(){
-   
-    
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p5").style.display="none";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="none";
-    document.getElementById("p111").style.display="none";
-    document.getElementById("p12").style.display="none";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
-    playsimulation();
-}
-/* start  from step2 */
-function gostep2(){
-    
-    document.getElementById("p1").style.display="none";
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p5").style.display="none";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="none";
-    document.getElementById("p111").style.display="none";
-    document.getElementById("p12").style.display="none";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
-    gonextstep2();
-}
-
-/* start  from step3 */
-function gostep3(){
-   
-    document.getElementById("p1").style.display="none";
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p111").style.display="none";
-    document.getElementById("p12").style.display="none";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
-    gonextstep3();
-}
-
-/* start  from step4 */
-function gostep4(){
-    document.getElementById("p1").style.display="none";
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="none";
-    document.getElementById("p12").style.display="none";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
-    gonextstep4();
-}
-/* start  from step5 */
-function gostep5(){
-    document.getElementById("p1").style.display="none";
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="none";
-    document.getElementById("p111").style.display="none";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
-    gonextstep5();
-}
-
-
-function replaybtn(){
-    //location.reload();
-    playsimulation();
-    document.getElementById("replaybtn").disabled=true;
-    document.getElementById("p2").style.display="none";
-    document.getElementById("p3").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p4").style.display="none";
-    document.getElementById("p5").style.display="none";
-    document.getElementById("p6").style.display="none";
-    document.getElementById("p7").style.display="none";
-    document.getElementById("p8").style.display="none";
-    document.getElementById("p9").style.display="none";
-    document.getElementById("p10").style.display="none";
-    document.getElementById("p111").style.display="none";
-    document.getElementById("p12").style.display="none";
-    document.getElementById("p13").style.display="none";
-    document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
-
-}
+showPage(currentPageIndex); ***/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
