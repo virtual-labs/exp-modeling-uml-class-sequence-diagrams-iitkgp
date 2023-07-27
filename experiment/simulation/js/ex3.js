@@ -12,13 +12,26 @@ var arrsr3 =[];
 
 function addbtnt31(){
 var inpt31=document.getElementById("inp31").value;
-
+let isInserted = false;
 if(inpt31 == ""){
   alert("Please specify the object name!");
 
 }
 
 else{
+
+  const selectElement3 = document.getElementById("selectobjs3");
+    const optItems3 = selectElement3.getElementsByTagName("option");
+    for (let i = 0; i < optItems3.length; i++) {
+        if((optItems3[i].textContent == inpt31) ){
+          isInserted = true;
+          break;
+        }
+      }
+      if (isInserted) {
+        alert("You have already entered an object by the same name.");
+        document.getElementById("inp31").value = "";
+      } else{
 
    // arrsr3.push(inpt31);
  /******* Creating options in table 2********/
@@ -54,7 +67,7 @@ select3b.appendChild(newOption3b);
 document.getElementById("inp31").value="";
 
 }
-
+}
 
 }
 

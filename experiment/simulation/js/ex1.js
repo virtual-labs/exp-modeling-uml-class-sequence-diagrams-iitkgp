@@ -391,7 +391,7 @@ function drawbtex1()
                   //stroke:'#B90000'
               },
               label: {
-                  text: class_names_array[i++],
+                  text: class_names_array[i],
                   fill: 'black',
                   fontSize: 16
               }

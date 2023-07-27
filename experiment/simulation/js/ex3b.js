@@ -12,13 +12,27 @@ var arrsr3b =[];
 
 function addbtnt31b(){
 var inpt31b=document.getElementById("inp31b").value;
-
+let isInserted = false;
 if(inpt31b == ""){
   alert("Please specify the object name!");
 
 }
 
-else{
+
+  else{
+
+    const selectElement3b = document.getElementById("selectobjs3b");
+      const optItems3b = selectElement3b.getElementsByTagName("option");
+      for (let i = 0; i < optItems3b.length; i++) {
+          if((optItems3b[i].textContent == inpt31b) ){
+            isInserted = true;
+            break;
+          }
+        }
+        if (isInserted) {
+          alert("You have already entered an object by the same name.");
+          document.getElementById("inp31b").value = "";
+        } else{
 
    // arrsr3.push(inpt31);
  /******* Creating options in table 2********/
@@ -54,7 +68,7 @@ select3b2.appendChild(newOption3b2);
 document.getElementById("inp31b").value="";
 
 }
-
+  }
 
 }
 
