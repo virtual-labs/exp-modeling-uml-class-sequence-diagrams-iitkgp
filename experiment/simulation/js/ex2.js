@@ -11,6 +11,7 @@ var arrsr =[];
 
 function addbtnt21(){
 var inpt21=document.getElementById("inp21").value;
+let isInserted = false;
 
 if(inpt21 == ""){
   alert("Please specify the object name!");
@@ -18,6 +19,19 @@ if(inpt21 == ""){
 }
 
 else{
+    const selectElement = document.getElementById("selectobjs");
+    const optItems = selectElement.getElementsByTagName("option");
+    for (let i = 0; i < optItems.length; i++) {
+        if((optItems[i].textContent == inpt21) ){
+          isInserted = true;
+          break;
+        }
+      }
+      if (isInserted) {
+        alert("You have already entered an object by the same name.");
+        document.getElementById("inp21").value = "";
+      } else {
+
 
    // arrsr.push(inpt21);
  /******* Creating options in table 2********/
@@ -53,7 +67,7 @@ selectt2b.appendChild(newOptiont2b);
 document.getElementById("inp21").value="";
 
 }
-
+}
 
 }
 
