@@ -9,9 +9,9 @@ Author: Prakriti Dhang*/
 /*********************************************Function for Table 1 ****************************************/
 
 var arrsr3b =[];
-
+const predefinedWordsex3b = ['user', 'web browser', 'web server',  'resource 1', 'resource 2'];
 function addbtnt31b(){
-var inpt31b=document.getElementById("inp31b").value;
+var inpt31b=document.getElementById("inp31b").value.toLowerCase();;
 let isInserted = false;
 if(inpt31b == ""){
   alert("Please specify the object name!");
@@ -33,6 +33,7 @@ if(inpt31b == ""){
           alert("You have already entered an object by the same name.");
           document.getElementById("inp31b").value = "";
         } else{
+          if (predefinedWordsex3b.includes(inpt31b)) {
 
    // arrsr3.push(inpt31);
  /******* Creating options in table 2********/
@@ -66,7 +67,10 @@ let select3b2 = document.getElementById('selectobjr3b');
 select3b2.appendChild(newOption3b2);
 
 document.getElementById("inp31b").value="";
-
+          }
+          else {
+            alert("Insert the object name  same as given in the problem statement. \n\n Hint: Objects are 'user', 'web browser', 'web server',  'resource 1', 'resource 2.");
+          }
 }
   }
 
@@ -220,7 +224,7 @@ document.getElementById("inp31b").value="";
 
 
  else{
-  alert("Message passing is not possible between " +objsval3b +" and " +objrval3b );
+  alert("Message passing is not possible between " +objsval3b +" and " +objrval3b +". Please check message type." );
  }
  //document.getElementById('tbodyt33').appendChild(newtr);
  
