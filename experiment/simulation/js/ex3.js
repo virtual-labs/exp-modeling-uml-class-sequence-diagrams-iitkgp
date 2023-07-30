@@ -243,6 +243,7 @@ function drawbtnex3() {
   else {
     document.getElementById("dispuml3").style.display = "none";
     document.getElementById("seq_diag_ex3").style.display = "none";
+    alert("Enter Object name and message in table 3. \n\n Hint: From the given problem statement, there are four objects and six messages are passed between objects.");
   }
 
 
