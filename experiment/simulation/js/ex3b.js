@@ -251,14 +251,26 @@ var ele12a, ele12b;
 var click2a, click2b;
 var link2a, link2b,link2c, link2d, link2e;
 var line2a,line2b,line2c,line2d,line2e,line2f,line2g,line2h,line2i,line2j,line2k,line2l;
+var lensr3b, lenmsg3b;
 function drawbtnex3b(){
 
   
 
-        document.getElementById("dispuml3b").style.display="block";
-        document.getElementById("seq_diag_ex3b").style.display="block";
+       // document.getElementById("dispuml3b").style.display="block";
+        //document.getElementById("seq_diag_ex3b").style.display="block";
 
-
+        lensr3b = arrsr3b.length;
+        lenmsg3b = arrmesg3b.length;
+      
+        if ((lensr3b == 5) && (lenmsg3b == 12)) {
+          document.getElementById("dispuml3b").style.display="block";
+          document.getElementById("seq_diag_ex3b").style.display="block";
+        }
+        else {
+          document.getElementById("dispuml3b").style.display = "none";
+          document.getElementById("seq_diag_ex3b").style.display = "none";
+          alert("Enter Object name and message in table 3. \n\n Hint: From the given problem statement, there are five objects and twelve messages are passed between objects.");
+        }
        
        ele12a = document.getElementById('element-12a');
           ele12b = document.getElementById('element-12b');
