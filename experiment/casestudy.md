@@ -70,10 +70,11 @@ The relation between "IssueManager" class and "Book" class is shown as "weak dep
 With the classes so identified, the code for issue book could look as follows:
 
 
-  public ID IssueBook(ID userID, ID bookID) {
 
-
-    Member user = Member.GetMember(userID);
+  
+    public ID IssueBook(ID userID, ID bookID) {
+     
+     Member user = Member.GetMember(userID);
 
       ID transactionID = null;
 
@@ -93,14 +94,14 @@ With the classes so identified, the code for issue book could look as follows:
 
       return transactionID;
 
-}
+    }
 
 
 The code for reissuing a book to an user could look like the following.
 
 
- public ID ReissueBook(ID userID, ID bookID) {
-
+ 
+    public ID ReissueBook(ID userID, ID bookID) {
 
     Member user = Member.GetMember(userID);
 
@@ -126,4 +127,4 @@ The code for reissuing a book to an user could look like the following.
 
       return transactionID;
 
-}
+    }
