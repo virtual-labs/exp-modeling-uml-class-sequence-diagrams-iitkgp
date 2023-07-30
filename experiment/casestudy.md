@@ -94,7 +94,7 @@ With the classes so identified, the code for issue book could look as follows:
 
       return transactionID;
 
-}
+    }
 
 
 The code for reissuing a book to an user could look like the following.
@@ -127,4 +127,4 @@ The code for reissuing a book to an user could look like the following.
 
       return transactionID;
 
-}
+    }
