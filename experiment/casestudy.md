@@ -69,32 +69,61 @@ The relation between "IssueManager" class and "Book" class is shown as "weak dep
 
 With the classes so identified, the code for issue book could look as follows:
 
-public ID IssueBook(ID userID, ID bookID) {
+
+  public ID IssueBook(ID userID, ID bookID) {
+
+
     Member user = Member.GetMember(userID);
-    ID transactionID = null;
-    if ( user.canIssueNow() && Book.IsAvailable(bookID) ) {
-        Book.SetStatusIssued(bookID);
-        user.incrementIssueCount(bookID);
-        BookTransaction transaction = new BookTransaction(userID, bookID);        
-        transaction.save();
-        transactionID = transaction.getID();
-    }
-    return transactionID;
+
+      ID transactionID = null;
+
+      if ( user.canIssueNow() && Book.IsAvailable(bookID) ) {
+
+          Book.SetStatusIssued(bookID);
+
+          user.incrementIssueCount(bookID);
+
+          BookTransaction transaction = new BookTransaction(userID, bookID); 
+
+          transaction.save();
+
+          transactionID = transaction.getID();
+
+     }
+
+      return transactionID;
+
 }
+
 
 The code for reissuing a book to an user could look like the following.
 
-public ID ReissueBook(ID userID, ID bookID) {
+
+ public ID ReissueBook(ID userID, ID bookID) {
+
+
     Member user = Member.GetMember(userID);
-    ID transactionID = null;
-    if ( user.canIssueNow() && Book.IsAvailable(bookID) ) {        
-        Integer count = user.getReissueCountFor(bookID);    // # of times this books has been reissued after it's recent issue by the user
-        if ( count < REISSUE_LIMIT ) {        
-            user.incrementReissueCount(bookID);
-            BookTransaction transaction = new BookTransaction(userID, bookID);        
-            transaction.save();
-            transactionID = transaction.getID();
-        }
-    }
-    return transactionID;
+
+     ID transactionID = null;
+
+      if ( user.canIssueNow() && Book.IsAvailable(bookID) ) {    
+
+           Integer count = user.getReissueCountFor(bookID);    // # of times this books has been reissued after it's recent issue by the user
+
+           if ( count < REISSUE_LIMIT ) {     
+
+              user.incrementReissueCount(bookID);
+
+              BookTransaction transaction = new BookTransaction(userID, bookID); 
+
+              transaction.save();
+
+              transactionID = transaction.getID();
+
+             }
+
+       }
+
+      return transactionID;
+
 }
