@@ -356,48 +356,595 @@ function removerowli(btndel) {
     }
   }
 
-function drawbtex1()
-{
-  document.getElementById("dispuml1").style.display = "block";
-
-  var namespace = joint.shapes;
-
-        var graph = new joint.dia.Graph({}, { cellNamespace: namespace });
-
-        paper = new joint.dia.Paper({
-            el: document.getElementById('class_diag_ex1'),
-            model: graph,
-          
-           
-            background: {
-                color: '#ffffff', //'rgba(0, 255, 0, 0.3)'
-            },
-            
-            cellViewNamespace: namespace
-        });
-
-  for( var i = 0; i < class_names_array.length; i++)
-  {      
-
-    var objs = new joint.shapes.standard.Rectangle();
-          
-          objs.position(15, 46);
-          objs.resize(100, 40);
-          objs.attr({
-              body: {
-                  //text: class_dictionary[document.getElementById("table_2_select_class").options[document.getElementById("table_2_select_class").selectedIndex].value],
-                  fill: '#FFFC8C',
-                  strokeWidth: 2,
-                  //stroke:'#B90000'
-              },
-              label: {
-                  text: class_names_array[i],
-                  fill: 'black',
-                  fontSize: 16
-              }
-          });
-          objs.addTo(graph);
+  function drawbtex1() {
+    document.getElementById("dispuml1").style.display = "block";
+  
+    var namespace = joint.shapes;
+  
+    var graph = new joint.dia.Graph({}, { cellNamespace: namespace });
+  
+    paper = new joint.dia.Paper({
+      el: document.getElementById('class_diag_ex1'),
+      model: graph,
+  
+  
+      background: {
+        color: '#ffffff', //'rgba(0, 255, 0, 0.3)'
+      },
+  
+      cellViewNamespace: namespace
+    });
+  
+    
+  
+    
+  
+      var objc0 = new joint.shapes.standard.Rectangle();
+  
+      objc0.position(312, 4);
+      objc0.resize(100, 40);
+      objc0.attr({
+        body: {
+          //text: class_dictionary[document.getElementById("table_2_select_class").options[document.getElementById("table_2_select_class").selectedIndex].value],
+          fill: '#FFFC8C',
+          strokeWidth: 2,
+          //stroke:'#B90000'
+        },
+        label: {
+          text: class_names_array[0],
+          fill: 'black',
+          fontSize: 16
+        }
+      });
+      objc0.addTo(graph);
+  
+      var objc1 = new joint.shapes.standard.Rectangle();
+  
+      objc1.position(23,124);
+      objc1.resize(150, 40);
+      objc1.attr({
+        body: {
+          //text: class_dictionary[document.getElementById("table_2_select_class").options[document.getElementById("table_2_select_class").selectedIndex].value],
+          fill: '#FFFC8C',
+          strokeWidth: 2,
+          //stroke:'#B90000'
+        },
+        label: {
+          text: class_names_array[1],
+          fill: 'black',
+          fontSize: 16
+        }
+      });
+      objc1.addTo(graph);
+  
+      var objc2 = new joint.shapes.standard.Rectangle();
+  
+      objc2.position(313,122);
+      objc2.resize(150, 40);
+      objc2.attr({
+        body: {
+          //text: class_dictionary[document.getElementById("table_2_select_class").options[document.getElementById("table_2_select_class").selectedIndex].value],
+          fill: '#FFFC8C',
+          strokeWidth: 2,
+          //stroke:'#B90000'
+        },
+        label: {
+          text: class_names_array[2],
+          fill: 'black',
+          fontSize: 16
+        }
+      });
+      objc2.addTo(graph);
+  
+      var objc3 = new joint.shapes.standard.Rectangle();
+  
+      objc3.position(570,119);
+      objc3.resize(100, 40);
+      objc3.attr({
+        body: {
+          //text: class_dictionary[document.getElementById("table_2_select_class").options[document.getElementById("table_2_select_class").selectedIndex].value],
+          fill: '#FFFC8C',
+          strokeWidth: 2,
+          //stroke:'#B90000'
+        },
+        label: {
+          text: class_names_array[3],
+          fill: 'black',
+          fontSize: 16
+        }
+      });
+      objc3.addTo(graph);
+  
+      var objc4 = new joint.shapes.standard.Rectangle();
+  
+      objc4.position(19,265);
+      objc4.resize(100, 40);
+      objc4.attr({
+        body: {
+          //text: class_dictionary[document.getElementById("table_2_select_class").options[document.getElementById("table_2_select_class").selectedIndex].value],
+          fill: '#FFFC8C',
+          strokeWidth: 2,
+          //stroke:'#B90000'
+        },
+        label: {
+          text: class_names_array[4],
+          fill: 'black',
+          fontSize: 16
+        }
+      });
+      objc4.addTo(graph);
+  
+      var objc5 = new joint.shapes.standard.Rectangle();
+  
+      objc5.position(280,261);
+      objc5.resize(100, 40);
+      objc5.attr({
+        body: {
+          //text: class_dictionary[document.getElementById("table_2_select_class").options[document.getElementById("table_2_select_class").selectedIndex].value],
+          fill: '#FFFC8C',
+          strokeWidth: 2,
+          //stroke:'#B90000'
+        },
+        label: {
+          text: class_names_array[5],
+          fill: 'black',
+          fontSize: 16
+        }
+      });
+      objc5.addTo(graph);
+  
+      var objc6 = new joint.shapes.standard.Rectangle();
+  
+      objc6.position(414,260);
+      objc6.resize(150, 40);
+      objc6.attr({
+        body: {
+          //text: class_dictionary[document.getElementById("table_2_select_class").options[document.getElementById("table_2_select_class").selectedIndex].value],
+          fill: '#FFFC8C',
+          strokeWidth: 2,
+          //stroke:'#B90000'
+        },
+        label: {
+          text: class_names_array[6],
+          fill: 'black',
+          fontSize: 16
+        }
+      });
+      objc6.addTo(graph);
+  
+      var objc7 = new joint.shapes.standard.Rectangle();
+  
+      objc7.position(592,259);
+      objc7.resize(100, 40);
+      objc7.attr({
+        body: {
+          //text: class_dictionary[document.getElementById("table_2_select_class").options[document.getElementById("table_2_select_class").selectedIndex].value],
+          fill: '#FFFC8C',
+          strokeWidth: 2,
+          //stroke:'#B90000'
+        },
+        label: {
+          text: class_names_array[7],
+          fill: 'black',
+          fontSize: 16
+        }
+      });
+      objc7.addTo(graph);
+  
+      var objc8 = new joint.shapes.standard.Rectangle();
+  
+      objc8.position(6,378);
+      objc8.resize(100, 40);
+      objc8.attr({
+        body: {
+          //text: class_dictionary[document.getElementById("table_2_select_class").options[document.getElementById("table_2_select_class").selectedIndex].value],
+          fill: '#FFFC8C',
+          strokeWidth: 2,
+          //stroke:'#B90000'
+        },
+        label: {
+          text: class_names_array[8],
+          fill: 'black',
+          fontSize: 16
+        }
+      });
+      objc8.addTo(graph);
+  
+      var objc9 = new joint.shapes.standard.Rectangle();
+  
+      objc9.position(119,378);
+      objc9.resize(100, 40);
+      objc9.attr({
+        body: {
+          //text: class_dictionary[document.getElementById("table_2_select_class").options[document.getElementById("table_2_select_class").selectedIndex].value],
+          fill: '#FFFC8C',
+          strokeWidth: 2,
+          //stroke:'#B90000'
+        },
+        label: {
+          text: class_names_array[9],
+          fill: 'black',
+          fontSize: 16
+        }
+      });
+      objc9.addTo(graph);
+  
+      var objc10 = new joint.shapes.standard.Rectangle();
+  
+      objc10.position(230,376);
+      objc10.resize(100, 40);
+      objc10.attr({
+        body: {
+          //text: class_dictionary[document.getElementById("table_2_select_class").options[document.getElementById("table_2_select_class").selectedIndex].value],
+          fill: '#FFFC8C',
+          strokeWidth: 2,
+          //stroke:'#B90000'
+        },
+        label: {
+          text: class_names_array[10],
+          fill: 'black',
+          fontSize: 16
+        }
+      });
+      objc10.addTo(graph);
+  
+      var objc11 = new joint.shapes.standard.Rectangle();
+  
+      objc11.position(472,375);
+      objc11.resize(100, 40);
+      objc11.attr({
+        body: {
+          //text: class_dictionary[document.getElementById("table_2_select_class").options[document.getElementById("table_2_select_class").selectedIndex].value],
+          fill: '#FFFC8C',
+          strokeWidth: 2,
+          //stroke:'#B90000'
+        },
+        label: {
+          text: class_names_array[11],
+          fill: 'black',
+          fontSize: 16
+        }
+      });
+      objc11.addTo(graph);
+  
+      joint.shapes.standard.Link.define('examples.CustomLink', {
+       
+        attrs:{
+          line:{
+            stroke: 'black',
+            sourceMarker: 'none',
+            targetMarker: 'none'
+          },
+        },
+      });
+  
+      var link0 = new joint.shapes.standard.Link();
+      link0.source(objc1);
+      link0.target(objc0);
+      link0.addTo(graph);
+  
+      link0.appendLabel({
+        attrs: {
+            text: {
+                text: '1'
+            }
+        },
+        position: {
+            distance: 0.2
+        }
+    });
+  
+    link0.appendLabel({
+      attrs: {
+          text: {
+              text: '1'
+          }
+      },
+      position: {
+          distance: 0.9
+      }
+  });
+  
+      var link1 = new joint.shapes.standard.Link();
+      link1.source(objc2);
+      link1.target(objc0);
+      link1.addTo(graph);
+  
+      link1.appendLabel({
+        attrs: {
+            text: {
+                text: '1'
+            }
+        },
+        position: {
+            distance: 0.2
+        }
+    });
+    link1.appendLabel({
+      attrs: {
+          text: {
+              text: '1'
+          }
+      },
+      position: {
+          distance: 0.7
+      }
+  });
+  
+      var link2 = new joint.shapes.examples.CustomLink();
+      link2.source(objc0);
+      link2.target(objc3);
+      link2.addTo(graph);
+  
+      link2.appendLabel({
+        attrs: {
+            text: {
+                text: '0..* end response'
+            }
+        },
+        position: {
+            distance: 0.10
+        }
+    });
+  
+    link2.appendLabel({
+      attrs: {
+          text: {
+              text: '0..* request page'
+          }
+      },
+      position: {
+          distance: 0.8
+      }
+  });
+  
+      var link3 = new joint.shapes.standard.Link();
+      link3.source(objc1);
+      link3.target(objc4);
+      link3.addTo(graph);
+  
+      link3.appendLabel({
+        attrs: {
+            text: {
+                text: '1'
+            }
+        },
+        position: {
+            distance: 0.10
+        }
+    });
+    link3.appendLabel({
+      attrs: {
+          text: {
+              text: 'displays'
+          }
+      },
+      position: {
+          distance: 0.35
+      }
+  });
+  link3.appendLabel({
+    attrs: {
+        text: {
+            text: '0..*'
+        }
+    },
+    position: {
+        distance: 0.7
+    }
+  });
+  
+      var link4 = new joint.shapes.standard.Link();
+      link4.source(objc5);
+      link4.target(objc2);
+      link4.addTo(graph);
+  
+      link4.appendLabel({
+        attrs: {
+            text: {
+                text: '1'
+            }
+        },
+        position: {
+            distance: 0.2
+        }
+    });
+    link4.appendLabel({
+      attrs: {
+          text: {
+              text: '1'
+          }
+      },
+      position: {
+          distance: 0.8
+      }
+  });
+  
+      var link5 = new joint.shapes.standard.Link();
+      link5.source(objc6);
+      link5.target(objc2);
+      link5.addTo(graph);
+  
+      link5.appendLabel({
+        attrs: {
+            text: {
+                text: '1'
+            }
+        },
+        position: {
+            distance: 0.10
+        }
+    });
+    link5.appendLabel({
+      attrs: {
+          text: {
+              text: '1'
+          }
+      },
+      position: {
+          distance: 0.8
+      }
+  });
+  
+      var link6 = new joint.shapes.standard.Link();
+      link6.source(objc7);
+      link6.target(objc2);
+      link6.addTo(graph);
+  
+      link6.appendLabel({
+        attrs: {
+            text: {
+                text: '1'
+            }
+        },
+        position: {
+            distance: 0.10
+        }
+    });
+    link6.appendLabel({
+      attrs: {
+          text: {
+              text: '1'
+          }
+      },
+      position: {
+          distance: 0.8
+      }
+  });
+  
+      
+      var link7 = new joint.shapes.examples.CustomLink();
+      link7.source(objc7);
+      link7.target(objc11);
+      link7.addTo(graph);
+  
+      link7.appendLabel({
+        attrs: {
+            text: {
+                text: '1'
+            }
+        },
+        position: {
+            distance: 0.2
+        }
+    });
+    link7.appendLabel({
+      attrs: {
+          text: {
+              text: 'handles'
+          }
+      },
+      position: {
+          distance: 0.5
+      }
+  });
+  link7.appendLabel({
+    attrs: {
+        text: {
+            text: '0..*'
+        }
+    },
+    position: {
+        distance: 0.8
+    }
+  });
+      
+      
+  
+  
+      var link8 =new joint.shapes.examples.CustomLink();
+      link8.source(objc6);
+      link8.target(objc11);
+      link8.addTo(graph);
+  
+      link8.appendLabel({
+        attrs: {
+            text: {
+                text: '1'
+            }
+        },
+        position: {
+            distance: 0.2
+        }
+    });
+    link8.appendLabel({
+      attrs: {
+          text: {
+              text: 'generates'
+          }
+      },
+      position: {
+          distance: 0.5
+      }
+  });
+  link8.appendLabel({
+    attrs: {
+        text: {
+            text: '0..*'
+        }
+    },
+    position: {
+        distance: 0.8
+    }
+  });
+  
+      
+  
+      var link9 = new joint.shapes.examples.CustomLink();
+      link9.source(objc5);
+      link9.target(objc11);
+      link9.addTo(graph);
+  
+      link9.appendLabel({
+        attrs: {
+            text: {
+                text: '1'
+            }
+        },
+        position: {
+            distance: 0.2
+        }
+    });
+    link9.appendLabel({
+      attrs: {
+          text: {
+              text: 'generates'
+          }
+      },
+      position: {
+          distance: 0.5
+      }
+  });
+  link9.appendLabel({
+    attrs: {
+        text: {
+            text: '0..*'
+        }
+    },
+    position: {
+        distance: 0.8
+    }
+  });
+  
+      var link10 = new joint.shapes.standard.Link();
+      link10.source(objc8);
+      link10.target(objc4);
+      link10.addTo(graph);
+  
+      var link11 = new joint.shapes.standard.Link();
+      link11.source(objc9);
+      link11.target(objc4);
+      link11.addTo(graph);
+  
+      var link12 = new joint.shapes.standard.Link();
+      link12.source(objc10);
+      link12.target(objc4);
+      link12.addTo(graph);
   }
-}
+  
+  
+  
+  
+  
 
 
