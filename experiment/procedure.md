@@ -25,7 +25,7 @@ Following are the instructions specifically for this experiment:
 7. If you want to delete any inheritance relation, go to the **‘Table #7’**, remove the sub-class or super-class.
 8. **‘Table #5’** lets you define association relationships between any two classes. Select the first class name from the first dropdown list, the second from the fifth (right most) drop down list. Select one association type from the second dropdown list. If you want to put any name to the association, write the text for the name to the second textbox. If you wish to give role name to any one or both end of association then you write the name in first or third or in both text boxes. Click on the ’Add’ button at the right side to add this association. Repeat this for all the possible associations.
 9. Associations so defined will be displayed in the **‘Table #8’**. Here, you have the option to remove a wrongly defined associations.
-10. Click on the **‘Draw’** button to draw the class diagram. You can click on this button at any time to reflect the changes that you have made to the classes or relationships. The class diagram will be displayed at the bottom of the page.
+10. Click on the **‘Draw’** button to draw the class diagram. 
 11. To view a sample solution for the exercise, click on the **'Submit'** button, and then on the **'View Solution'** button.
 
 

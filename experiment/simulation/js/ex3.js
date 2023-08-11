@@ -69,6 +69,7 @@ function addbtnt31() {
       }
       else {
         alert("Insert the object name same as given in the problem statement. \n\n Hint: Objects are 'user', 'web browser', 'web server',  'database'");
+        document.getElementById("inp31").value = "";
       }
     }
   }
