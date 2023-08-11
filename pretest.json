@@ -1,0 +1,52 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": " A class is a",
+      "answers": {
+        "a": "Blueprint",
+        "b": "Specific instance of an object",
+        "c": "Category of user requirement",
+        "d": "None of the above"
+      },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In class diagrams, a class is represented with a",
+      "answers": {
+        "a": "Rectangle ",
+        "b": "Human stick figure ",
+        "c": "Ellipse",
+        "d": "Diamond"
+       
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "From a class diagram it is evident that",
+      "answers": {
+        "a": "All classes work in isolation ",
+        "b": "Each class is related with every other class",
+        "c": "Most of the classes are related  ",
+        "d": "Class diagram show object interactions  "
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What does a sequence diagram represent?",
+      "answers": {
+        "a": "Workflow in the system",
+        "b": "How classes are related to each other  ",
+        "c": "Sequence of events flow to achieve a target ",
+        "d": "Sequence of activities to be performed before moving to next state  "
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+    
+  ]
+}

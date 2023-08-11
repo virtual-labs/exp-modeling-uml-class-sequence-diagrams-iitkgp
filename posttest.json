@@ -1,0 +1,49 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "  Inheritance among classes are represented by a",
+      "answers": {
+        "a": "Solid line from the extending to the extended class ",
+        "b": "Line with an unfilled arrow head from the extending to the extended class ",
+        "c": " Line with a filled diamond from the extending to the extended class ",
+        "d": "Dotted line with extend stereotype from the extending to the extended class "
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Private members (or methods) in a class are indicated with a",
+      "answers": {
+        "a": "Hash (#) sign  ",
+        "b": "Minus (-) sign ",
+        "c": "Plus (+) sign ",
+        "d": "Tilde (~) sign "
+       
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In UML 2.0 a synchronous message is represented with a",
+      "answers": {
+        "a": "Solid arrow with filled arrowhead  ",
+        "b": "Solid arrow with empty arrowhead ",
+        "c": "Dotted arrow with filled arrowhead  ",
+        "d": "Dotted arrow with empty arrowhead   "
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "An object can send a synchronous message and multiple asynchronous message in parallel",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}
