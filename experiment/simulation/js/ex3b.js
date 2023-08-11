@@ -70,6 +70,7 @@ document.getElementById("inp31b").value="";
           }
           else {
             alert("Insert the object name  same as given in the problem statement. \n\n Hint: Objects are 'user', 'web browser', 'web server',  'resource 1', 'resource 2.");
+            document.getElementById("inp31b").value="";
           }
 }
   }

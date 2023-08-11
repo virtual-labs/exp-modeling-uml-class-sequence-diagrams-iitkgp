@@ -72,6 +72,8 @@ function addbtnt21() {
         }
         else{
             alert("From the given problem statement, the objects are Client and Server");
+            document.getElementById("inp21").value = "";
+
         }
     }
     
