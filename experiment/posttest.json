@@ -2,37 +2,47 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "  Inheritance among classes are represented by a",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Solid line from the extending to the extended class ",
+        "b": "Line with an unfilled arrow head from the extending to the extended class ",
+        "c": " Line with a filled diamond from the extending to the extended class ",
+        "d": "Dotted line with extend stereotype from the extending to the extended class "
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Private members (or methods) in a class are indicated with a",
+      "answers": {
+        "a": "Hash (#) sign  ",
+        "b": "Minus (-) sign ",
+        "c": "Plus (+) sign ",
+        "d": "Tilde (~) sign "
+       
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In UML 2.0 a synchronous message is represented with a",
+      "answers": {
+        "a": "Solid arrow with filled arrowhead  ",
+        "b": "Solid arrow with empty arrowhead ",
+        "c": "Dotted arrow with filled arrowhead  ",
+        "d": "Dotted arrow with empty arrowhead   "
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "An object can send a synchronous message and multiple asynchronous message in parallel",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "True",
+        "b": "False"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]
